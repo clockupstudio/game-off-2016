@@ -1,5 +1,6 @@
 import * as Phaser from "phaser";
 import { Her } from "./her";
+import { SmallFish } from "./small_fish";
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
 
@@ -29,11 +30,4 @@ export class WarState extends Phaser.State {
         }
     }
 
-}
-
-class SmallFish {
-    static create(game: Phaser.Game) {
-        let sprite = game.add.sprite(game.world.centerX, game.world.centerY - 300, "small_fish");
-        sprite.anchor.setTo(0.5);
-    }
 }
