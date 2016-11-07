@@ -9,7 +9,7 @@ export class WarState extends Phaser.State {
     private her: Her;
 
     preload() {
-        this.game.load.image("her", `${SPRITESHEETS_PATH}/main_char.png`);
+        this.game.load.image("her", `${SPRITESHEETS_PATH}/her.png`);
         this.game.load.image("small_fish", `${SPRITESHEETS_PATH}/small_fish.png`);
     }
 
