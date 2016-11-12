@@ -6,7 +6,7 @@ const SPRITESHEETS_PATH = "assets/spritesheets";
 
 export class WarState extends Phaser.State {
 
-    private her: Her;
+    private herController: HerController;
 
     preload() {
         this.game.load.image("her", `${SPRITESHEETS_PATH}/main_char.png`);
@@ -14,8 +14,18 @@ export class WarState extends Phaser.State {
     }
 
     create() {
-        this.her = Her.create(this.game);
+        this.herController = new HerController(this.game, Her.create(this.game));
         SmallFish.create(this.game);
+    }
+
+    update() {
+        this.herController.update();
+    }
+}
+
+export class HerController {
+
+    constructor(private game: Phaser.Game, private her: Her) {
     }
 
     update() {
@@ -29,5 +39,4 @@ export class WarState extends Phaser.State {
             this.her.moveDown();
         }
     }
-
 }
