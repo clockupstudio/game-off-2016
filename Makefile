@@ -5,6 +5,7 @@ all: lint build
 
 build:
 	$(NODE_BIN)/webpack
+	cp node_modules/phaser/build/phaser.min.js build/phaser.min.js
 
 lint:
 	$(NODE_BIN)/tslint --project ./tsconfig.json

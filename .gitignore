@@ -1,5 +1,5 @@
 # Build directory
-#build
+build
 
 # Typings
 typings
@@ -52,5 +52,5 @@ jspm_packages
 # Mac Thumbnail
 .DS_Store
 
-# VS code settings
+# Visual studio code settings
 .vscode
