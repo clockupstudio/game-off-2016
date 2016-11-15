@@ -4,6 +4,9 @@ const VELOCITY = 10;
 
 export class Her {
 
+    private fireRate = 200;
+    private nextFire: number;
+
     constructor(private sprite: Phaser.Sprite) { }
 
     moveRight() {
@@ -22,6 +25,18 @@ export class Her {
         this.sprite.y += VELOCITY;
     }
 
+    fire() {
+        console.log(this.sprite.game.time.time, this.nextFire);
+        if (this.sprite.game.time.time < this.nextFire) {
+            return;
+        }
+
+        const bullet = new Bullet(this.sprite);
+        bullet.body.velocity.y -= 200;
+
+        this.nextFire = this.sprite.game.time.time + this.fireRate;
+    }
+
     static create(game: Phaser.Game): Her {
         let sprite = game.add.sprite(game.world.centerX, game.world.centerY, "her");
         sprite.anchor.setTo(0.5, 0.5);
@@ -29,4 +44,12 @@ export class Her {
         return new Her(sprite);
     }
 
+}
+
+class Bullet extends Phaser.Sprite {
+    constructor(her: Phaser.Sprite) {
+        super(her.game, her.x, her.y, "bullet");
+        her.game.add.existing(this);
+        her.game.physics.arcade.enable(this);
+    }
 }
