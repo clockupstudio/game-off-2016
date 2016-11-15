@@ -1,4 +1,5 @@
 import * as Phaser from "phaser";
+import * as bullet from "./bullet";
 
 const VELOCITY = 10;
 
@@ -26,13 +27,12 @@ export class Her {
     }
 
     fire() {
-        console.log(this.sprite.game.time.time, this.nextFire);
         if (this.sprite.game.time.time < this.nextFire) {
             return;
         }
 
-        const bullet = new Bullet(this.sprite);
-        bullet.body.velocity.y -= 200;
+        const bullets = bullet.createDualBullets(this.sprite.game, this.sprite.x, this.sprite.y);
+        bullet.moveBullets(bullets);
 
         this.nextFire = this.sprite.game.time.time + this.fireRate;
     }
@@ -44,12 +44,4 @@ export class Her {
         return new Her(sprite);
     }
 
-}
-
-class Bullet extends Phaser.Sprite {
-    constructor(her: Phaser.Sprite) {
-        super(her.game, her.x, her.y, "bullet");
-        her.game.add.existing(this);
-        her.game.physics.arcade.enable(this);
-    }
 }
