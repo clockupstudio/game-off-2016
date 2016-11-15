@@ -7,6 +7,7 @@ const SPRITESHEETS_PATH = "assets/spritesheets";
 export class WarState extends Phaser.State {
 
     private herController: HerController;
+    private smallFish: SmallFish;
 
     preload() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -16,12 +17,17 @@ export class WarState extends Phaser.State {
     }
 
     create() {
+        this.smallFish = SmallFish.create(this.game);
         this.herController = new HerController(this.game, Her.create(this.game));
-        SmallFish.create(this.game);
     }
 
     update() {
         this.herController.update();
+        this.smallFish.move();
+        if (this.smallFish.movedOutOfGame()) {
+            this.smallFish.destroy();
+            this.smallFish = null;
+        }
     }
 }
 
