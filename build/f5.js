@@ -174,6 +174,7 @@
 	        }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        else if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
 	            this.her.fire();
 	        }
@@ -189,6 +190,9 @@
 >>>>>>> Remove ignore's entry for deploy to Github page
 =======
 	        else if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
+=======
+	        if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
+>>>>>>> build move and shoot at the same time
 	            this.her.fire();
 	        }
 	    };
@@ -304,6 +308,7 @@
 	        _super.call(this, game, x, y, "bullet");
 	        game.add.existing(this);
 	        game.physics.arcade.enable(this);
+	        this.sendToBack();
 	    }
 	    return Bullet;
 	}(Phaser.Sprite));
