@@ -117,11 +117,16 @@
 	        this.game.load.image("bullet", SPRITESHEETS_PATH + "/bullet.png");
 	    };
 	    WarState.prototype.create = function () {
+	        this.smallFish = small_fish_1.SmallFish.create(this.game);
 	        this.herController = new HerController(this.game, her_1.Her.create(this.game));
-	        small_fish_1.SmallFish.create(this.game);
 	    };
 	    WarState.prototype.update = function () {
 	        this.herController.update();
+	        this.smallFish.move();
+	        if (this.smallFish.movedOutOfGame()) {
+	            this.smallFish.destroy();
+	            this.smallFish = null;
+	        }
 	    };
 	    return WarState;
 	}(Phaser.State));
@@ -324,12 +329,24 @@
 /***/ function(module, exports) {
 
 	"use strict";
+	var VELOCITY = 10;
 	var SmallFish = (function () {
-	    function SmallFish() {
+	    function SmallFish(sprite) {
+	        this.sprite = sprite;
 	    }
+	    SmallFish.prototype.move = function () {
+	        this.sprite.y += VELOCITY;
+	    };
+	    SmallFish.prototype.movedOutOfGame = function () {
+	        return (this.sprite.y > 1080);
+	    };
+	    SmallFish.prototype.destroy = function () {
+	        this.sprite.destroy();
+	    };
 	    SmallFish.create = function (game) {
 	        var sprite = game.add.sprite(game.world.centerX, game.world.centerY - 300, "small_fish");
 	        sprite.anchor.setTo(0.5);
+	        return new SmallFish(sprite);
 	    };
 	    return SmallFish;
 	}());
