@@ -93,7 +93,11 @@
 	};
 	var Phaser = __webpack_require__(2);
 	var her_1 = __webpack_require__(4);
+<<<<<<< HEAD
 	var small_fish_1 = __webpack_require__(6);
+=======
+	var small_fish_1 = __webpack_require__(5);
+>>>>>>> Remove ignore's entry for deploy to Github page
 	var SPRITESHEETS_PATH = "assets/spritesheets";
 	var WarState = (function (_super) {
 	    __extends(WarState, _super);
@@ -101,6 +105,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    WarState.prototype.preload = function () {
+<<<<<<< HEAD
 	        this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	        this.game.load.image("her", SPRITESHEETS_PATH + "/main_char.png");
 	        this.game.load.image("small_fish", SPRITESHEETS_PATH + "/small_fish.png");
@@ -122,6 +127,16 @@
 	        this.her = her;
 	    }
 	    HerController.prototype.update = function () {
+=======
+	        this.game.load.image("her", SPRITESHEETS_PATH + "/main_char.png");
+	        this.game.load.image("small_fish", SPRITESHEETS_PATH + "/small_fish.png");
+	    };
+	    WarState.prototype.create = function () {
+	        this.her = her_1.Her.create(this.game);
+	        small_fish_1.SmallFish.create(this.game);
+	    };
+	    WarState.prototype.update = function () {
+>>>>>>> Remove ignore's entry for deploy to Github page
 	        if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
 	            this.her.moveRight();
 	        }
@@ -134,6 +149,7 @@
 	        else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
 	            this.her.moveDown();
 	        }
+<<<<<<< HEAD
 	        else if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
 	            this.her.fire();
 	        }
@@ -141,19 +157,34 @@
 	    return HerController;
 	}());
 	exports.HerController = HerController;
+=======
+	    };
+	    return WarState;
+	}(Phaser.State));
+	exports.WarState = WarState;
+>>>>>>> Remove ignore's entry for deploy to Github page
 
 
 /***/ },
 /* 4 */
+<<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var bullet = __webpack_require__(5);
+=======
+/***/ function(module, exports) {
+
+	"use strict";
+>>>>>>> Remove ignore's entry for deploy to Github page
 	var VELOCITY = 10;
 	var Her = (function () {
 	    function Her(sprite) {
 	        this.sprite = sprite;
+<<<<<<< HEAD
 	        this.fireRate = 200;
+=======
+>>>>>>> Remove ignore's entry for deploy to Github page
 	    }
 	    Her.prototype.moveRight = function () {
 	        this.sprite.x += VELOCITY;
@@ -167,6 +198,7 @@
 	    Her.prototype.moveDown = function () {
 	        this.sprite.y += VELOCITY;
 	    };
+<<<<<<< HEAD
 	    Her.prototype.fire = function () {
 	        if (this.sprite.game.time.time < this.nextFire) {
 	            return;
@@ -175,6 +207,8 @@
 	        bullet.moveBullets(bullets);
 	        this.nextFire = this.sprite.game.time.time + this.fireRate;
 	    };
+=======
+>>>>>>> Remove ignore's entry for deploy to Github page
 	    Her.create = function (game) {
 	        var sprite = game.add.sprite(game.world.centerX, game.world.centerY, "her");
 	        sprite.anchor.setTo(0.5, 0.5);
@@ -188,6 +222,7 @@
 
 /***/ },
 /* 5 */
+<<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -223,6 +258,8 @@
 
 /***/ },
 /* 6 */
+=======
+>>>>>>> Remove ignore's entry for deploy to Github page
 /***/ function(module, exports) {
 
 	"use strict";
