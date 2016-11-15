@@ -94,10 +94,14 @@
 	var Phaser = __webpack_require__(2);
 	var her_1 = __webpack_require__(4);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	var small_fish_1 = __webpack_require__(6);
 =======
 	var small_fish_1 = __webpack_require__(5);
 >>>>>>> Remove ignore's entry for deploy to Github page
+=======
+	var small_fish_1 = __webpack_require__(6);
+>>>>>>> Player can shoot bullet
 	var SPRITESHEETS_PATH = "assets/spritesheets";
 	var WarState = (function (_super) {
 	    __extends(WarState, _super);
@@ -105,6 +109,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    WarState.prototype.preload = function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	        this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	        this.game.load.image("her", SPRITESHEETS_PATH + "/main_char.png");
@@ -128,15 +133,33 @@
 	    }
 	    HerController.prototype.update = function () {
 =======
+=======
+	        this.game.physics.startSystem(Phaser.Physics.ARCADE);
+>>>>>>> Player can shoot bullet
 	        this.game.load.image("her", SPRITESHEETS_PATH + "/main_char.png");
 	        this.game.load.image("small_fish", SPRITESHEETS_PATH + "/small_fish.png");
+	        this.game.load.image("bullet", SPRITESHEETS_PATH + "/bullet.png");
 	    };
 	    WarState.prototype.create = function () {
-	        this.her = her_1.Her.create(this.game);
+	        this.herController = new HerController(this.game, her_1.Her.create(this.game));
 	        small_fish_1.SmallFish.create(this.game);
 	    };
 	    WarState.prototype.update = function () {
+<<<<<<< HEAD
 >>>>>>> Remove ignore's entry for deploy to Github page
+=======
+	        this.herController.update();
+	    };
+	    return WarState;
+	}(Phaser.State));
+	exports.WarState = WarState;
+	var HerController = (function () {
+	    function HerController(game, her) {
+	        this.game = game;
+	        this.her = her;
+	    }
+	    HerController.prototype.update = function () {
+>>>>>>> Player can shoot bullet
 	        if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
 	            this.her.moveRight();
 	        }
@@ -149,6 +172,7 @@
 	        else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
 	            this.her.moveDown();
 	        }
+<<<<<<< HEAD
 <<<<<<< HEAD
 	        else if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
 	            this.her.fire();
@@ -163,10 +187,20 @@
 	}(Phaser.State));
 	exports.WarState = WarState;
 >>>>>>> Remove ignore's entry for deploy to Github page
+=======
+	        else if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
+	            this.her.fire();
+	        }
+	    };
+	    return HerController;
+	}());
+	exports.HerController = HerController;
+>>>>>>> Player can shoot bullet
 
 
 /***/ },
 /* 4 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
 
@@ -177,14 +211,24 @@
 
 	"use strict";
 >>>>>>> Remove ignore's entry for deploy to Github page
+=======
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var bullet = __webpack_require__(5);
+>>>>>>> Player can shoot bullet
 	var VELOCITY = 10;
 	var Her = (function () {
 	    function Her(sprite) {
 	        this.sprite = sprite;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        this.fireRate = 200;
 =======
 >>>>>>> Remove ignore's entry for deploy to Github page
+=======
+	        this.fireRate = 200;
+>>>>>>> Player can shoot bullet
 	    }
 	    Her.prototype.moveRight = function () {
 	        this.sprite.x += VELOCITY;
@@ -199,6 +243,9 @@
 	        this.sprite.y += VELOCITY;
 	    };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Player can shoot bullet
 	    Her.prototype.fire = function () {
 	        if (this.sprite.game.time.time < this.nextFire) {
 	            return;
@@ -207,8 +254,11 @@
 	        bullet.moveBullets(bullets);
 	        this.nextFire = this.sprite.game.time.time + this.fireRate;
 	    };
+<<<<<<< HEAD
 =======
 >>>>>>> Remove ignore's entry for deploy to Github page
+=======
+>>>>>>> Player can shoot bullet
 	    Her.create = function (game) {
 	        var sprite = game.add.sprite(game.world.centerX, game.world.centerY, "her");
 	        sprite.anchor.setTo(0.5, 0.5);
@@ -223,6 +273,9 @@
 /***/ },
 /* 5 */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Player can shoot bullet
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -258,8 +311,11 @@
 
 /***/ },
 /* 6 */
+<<<<<<< HEAD
 =======
 >>>>>>> Remove ignore's entry for deploy to Github page
+=======
+>>>>>>> Player can shoot bullet
 /***/ function(module, exports) {
 
 	"use strict";
