@@ -23,10 +23,12 @@ export class WarState extends Phaser.State {
 
     update() {
         this.herController.update();
-        this.smallFish.move();
-        if (this.smallFish.movedOutOfGame()) {
-            this.smallFish.destroy();
-            this.smallFish = null;
+        if (this.smallFish !== null) {
+            this.smallFish.move();
+            if (this.smallFish.movedOutOfGame()) {
+                this.smallFish.destroy();
+                this.smallFish = null;
+            }
         }
     }
 }
