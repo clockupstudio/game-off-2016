@@ -67,6 +67,9 @@
 	        });
 	    }
 	    F5.prototype.create = function () {
+	        this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+	        this.game.scale.pageAlignHorizontally = true;
+	        this.game.scale.pageAlignVertically = true;
 	        this.game.state.add("war", war_state_1.WarState, false);
 	        this.game.state.start("war");
 	    };
@@ -122,10 +125,12 @@
 	    };
 	    WarState.prototype.update = function () {
 	        this.herController.update();
-	        this.smallFish.move();
-	        if (this.smallFish.movedOutOfGame()) {
-	            this.smallFish.destroy();
-	            this.smallFish = null;
+	        if (this.smallFish !== null) {
+	            this.smallFish.move();
+	            if (this.smallFish.movedOutOfGame()) {
+	                this.smallFish.destroy();
+	                this.smallFish = null;
+	            }
 	        }
 	    };
 	    return WarState;
