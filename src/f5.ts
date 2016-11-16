@@ -25,7 +25,7 @@ export class F5 {
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         this.game.scale.pageAlignHorizontally = true;
         this.game.scale.pageAlignVertically = true;
-        
+
         this.game.state.add("war", WarState, false);
         this.game.state.start("war");
     }
