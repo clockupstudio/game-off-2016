@@ -16,6 +16,26 @@
                  "width":160,
                  "x":882,
                  "y":3360
+                }, 
+                {
+                 "gid":2,
+                 "height":40,
+                 "id":6,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"small_fish"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":40,
+                 "x":944,
+                 "y":2680
                 }],
          "offsetx":152,
          "offsety":-48,
@@ -37,7 +57,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":5,
+ "nextobjectid":7,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tileheight":80,
@@ -54,6 +74,19 @@
          "tilecount":1,
          "tileheight":160,
          "tilewidth":160
+        }, 
+        {
+         "columns":1,
+         "firstgid":2,
+         "image":"..\/spritesheets\/small_fish.png",
+         "imageheight":40,
+         "imagewidth":40,
+         "margin":0,
+         "name":"small_fish",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":40,
+         "tilewidth":40
         }],
  "tilewidth":80,
  "version":1,

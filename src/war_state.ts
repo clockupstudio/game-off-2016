@@ -1,6 +1,7 @@
 import * as Phaser from "phaser";
 import { Her } from "./her";
 import { SmallFish } from "./small_fish";
+import * as _ from "lodash";
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
 const SOUNDS_PATH = "assets/sounds";
@@ -30,8 +31,7 @@ export class WarState extends Phaser.State {
         this.smallFish = SmallFish.create(this.game);
         this.herController = new HerController(this.game, this.createHer());
 
-        //this.game.camera.y = 2280;
-        this.game.camera.follow(this.herController.herSprite);
+        this.game.camera.y = 2280;
     }
 
     createHer(): Her {
@@ -41,22 +41,15 @@ export class WarState extends Phaser.State {
 
     findHerOrigin(): {x: number, y: number} {
 
-        var result = {
-            x: this.game.world.centerX, 
-            y: this.game.world.centerY
-        }
-
-        this.levelMap.objects["Player"].find((mapObject)=>{
-            console.log(mapObject)
-            if(mapObject.type === "player_start") {
-                result = {
-                    x: mapObject.x,
-                    y: (mapObject.y - 160)
-                }
-            }
+        let playerOrigin = _.find(this.levelMap.objects["Player"], (mapObject: any) => {
+            return mapObject.type === "player_start";
         });
 
-        return result;
+        return {
+            x: playerOrigin.x,
+            y: playerOrigin.y - 160
+        };
+
     }
 
     update() {
