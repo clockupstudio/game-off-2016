@@ -41,9 +41,13 @@ export class Her {
         this.nextFire = this.sprite.game.time.time + this.fireRate;
     }
 
-    static create(game: Phaser.Game): Her {
-        let sprite = game.add.sprite(game.world.centerX, game.world.centerY, "her");
-        sprite.anchor.setTo(0.5, 0.5);
+    get herSprite(): Phaser.Sprite {
+        return this.sprite;
+    }
+
+    static create(game: Phaser.Game, x: number, y: number): Her {
+        let sprite = game.add.sprite(x, y, "her");
+        //sprite.anchor.setTo(0.5, 0.5);
         sprite.inputEnabled = true;
         return new Her(sprite);
     }

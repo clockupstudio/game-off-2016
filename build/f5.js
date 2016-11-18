@@ -106,6 +106,7 @@
 	var small_fish_1 = __webpack_require__(6);
 >>>>>>> Player can shoot bullet
 	var SPRITESHEETS_PATH = "assets/spritesheets";
+	var TILEMAPS_PATH = "assets/tilemaps";
 	var WarState = (function (_super) {
 	    __extends(WarState, _super);
 	    function WarState() {
@@ -118,12 +119,39 @@
 	        this.game.load.image("her", SPRITESHEETS_PATH + "/main_char.png");
 	        this.game.load.image("small_fish", SPRITESHEETS_PATH + "/small_fish.png");
 	        this.game.load.image("bullet", SPRITESHEETS_PATH + "/bullet.png");
+	        this.game.load.tilemap("level_01", TILEMAPS_PATH + "/level_01.json", null, Phaser.Tilemap.TILED_JSON);
 	    };
 	    WarState.prototype.create = function () {
+	        this.levelMap = this.game.add.tilemap("level_01");
+	        this.backgroundLayer = this.levelMap.createLayer('Background');
+	        this.backgroundLayer.resizeWorld();
 	        this.smallFish = small_fish_1.SmallFish.create(this.game);
-	        this.herController = new HerController(this.game, her_1.Her.create(this.game));
+	        this.herController = new HerController(this.game, this.createHer());
+	        //this.game.camera.y = 2280;
+	        this.game.camera.follow(this.herController.herSprite);
+	    };
+	    WarState.prototype.createHer = function () {
+	        var position = this.findHerOrigin();
+	        return her_1.Her.create(this.game, position.x, position.y);
+	    };
+	    WarState.prototype.findHerOrigin = function () {
+	        var result = {
+	            x: this.game.world.centerX,
+	            y: this.game.world.centerY
+	        };
+	        this.levelMap.objects["Player"].find(function (mapObject) {
+	            console.log(mapObject);
+	            if (mapObject.type === "player_start") {
+	                result = {
+	                    x: mapObject.x,
+	                    y: (mapObject.y - 160)
+	                };
+	            }
+	        });
+	        return result;
 	    };
 	    WarState.prototype.update = function () {
+	        console.log(this.camera.y);
 	        this.herController.update();
 	        if (this.smallFish !== null) {
 	            this.smallFish.move();
@@ -132,6 +160,9 @@
 	                this.smallFish = null;
 	            }
 	        }
+	    };
+	    WarState.prototype.render = function () {
+	        this.game.debug.cameraInfo(this.game.camera, 32, 32);
 	    };
 	    return WarState;
 	}(Phaser.State));
@@ -206,6 +237,13 @@
 	            this.her.fire();
 	        }
 	    };
+	    Object.defineProperty(HerController.prototype, "herSprite", {
+	        get: function () {
+	            return this.her.herSprite;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    return HerController;
 	}());
 	exports.HerController = HerController;
@@ -269,6 +307,7 @@
 	        this.nextFire = this.sprite.game.time.time + this.fireRate;
 	    };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Remove ignore's entry for deploy to Github page
 =======
@@ -276,6 +315,18 @@
 	    Her.create = function (game) {
 	        var sprite = game.add.sprite(game.world.centerX, game.world.centerY, "her");
 	        sprite.anchor.setTo(0.5, 0.5);
+=======
+	    Object.defineProperty(Her.prototype, "herSprite", {
+	        get: function () {
+	            return this.sprite;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Her.create = function (game, x, y) {
+	        var sprite = game.add.sprite(x, y, "her");
+	        //sprite.anchor.setTo(0.5, 0.5);
+>>>>>>> set origin point of her from tilemap
 	        sprite.inputEnabled = true;
 	        return new Her(sprite);
 	    };

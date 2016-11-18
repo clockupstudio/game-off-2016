@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/clockupstudio/game-off-2016#readme",
   "dependencies": {
-    "phaser": "^2.6.2"
+    "phaser": "^2.6.2",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "ts-loader": "^1.0.0",
