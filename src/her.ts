@@ -7,8 +7,11 @@ export class Her {
 
     private fireRate = 200;
     private nextFire: number;
+    private shootingSound: Phaser.Sound;
 
-    constructor(private sprite: Phaser.Sprite) { }
+    constructor(private sprite: Phaser.Sprite) { 
+        this.shootingSound = new Phaser.Sound(this.sprite.game, "shooting");
+    }
 
     moveRight() {
         this.sprite.x += VELOCITY;
@@ -32,6 +35,7 @@ export class Her {
         }
 
         const bullets = bullet.createDualBullets(this.sprite.game, this.sprite.x, this.sprite.y);
+        this.shootingSound.play();
         bullet.moveBullets(bullets);
 
         this.nextFire = this.sprite.game.time.time + this.fireRate;
