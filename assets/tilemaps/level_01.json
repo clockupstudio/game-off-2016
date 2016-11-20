@@ -34,8 +34,48 @@
                  "type":"enemy",
                  "visible":true,
                  "width":40,
-                 "x":944,
-                 "y":2680
+                 "x":942,
+                 "y":2240
+                }, 
+                {
+                 "gid":2,
+                 "height":40,
+                 "id":7,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"small_fish"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":40,
+                 "x":942,
+                 "y":2194
+                }, 
+                {
+                 "gid":2,
+                 "height":40,
+                 "id":8,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"small_fish"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":40,
+                 "x":940.666666666667,
+                 "y":2146
                 }],
          "offsetx":152,
          "offsety":-48,
@@ -57,7 +97,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":7,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tileheight":80,
