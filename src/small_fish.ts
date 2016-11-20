@@ -19,16 +19,11 @@ export class SmallFish {
         this.sprite.destroy();
     }
 
-    addTo(group: Phaser.Group) {
-        group.add(this.sprite);
-    }
-
     update() {
         this.move();
-            if (this.movedOutOfGame()) {
-                this.destroy();
-                //smallFish = null;
-            }
+        if (this.movedOutOfGame()) {
+            this.destroy();
+        }
     }
 
     static create(game: Phaser.Game, x: number, y: number): SmallFish {
