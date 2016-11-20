@@ -23,6 +23,14 @@ export class SmallFish {
         group.add(this.sprite);
     }
 
+    update() {
+        this.move();
+            if (this.movedOutOfGame()) {
+                this.destroy();
+                //smallFish = null;
+            }
+    }
+
     static create(game: Phaser.Game, x: number, y: number): SmallFish {
         let sprite = game.add.sprite(x, y, "small_fish");
         sprite.anchor.setTo(0.5);

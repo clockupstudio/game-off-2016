@@ -70,11 +70,7 @@ export class WarState extends Phaser.State {
     update() {
         this.herController.update();
         this.enemyGroup.forEach((smallFish: SmallFish) => {
-            smallFish.move();
-            if (smallFish.movedOutOfGame()) {
-                smallFish.destroy();
-                smallFish = null;
-            }
+            smallFish.update()
         });
     }
 
