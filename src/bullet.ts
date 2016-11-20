@@ -1,6 +1,6 @@
 import * as Phaser from "phaser";
 
-const BULLET_VELOCITY = 300;
+const BULLET_VELOCITY = 1000;
 
 export function moveBullets(bullets: Bullet[]) {
     bullets[0].body.velocity.y -= BULLET_VELOCITY;
@@ -9,8 +9,8 @@ export function moveBullets(bullets: Bullet[]) {
 
 export function createDualBullets(game: Phaser.Game, x: number, y: number): Bullet[] {
     return [
-        new Bullet(game, x - 55, y - 30),
-        new Bullet(game, x + 55, y - 30),
+        new Bullet(game, x + 25, y + 30),
+        new Bullet(game, x + (160-25), y + 30),
     ];
 }
 

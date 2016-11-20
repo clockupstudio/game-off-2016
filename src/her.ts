@@ -47,7 +47,6 @@ export class Her {
 
     static create(game: Phaser.Game, x: number, y: number): Her {
         let sprite = game.add.sprite(x, y, "her");
-        //sprite.anchor.setTo(0.5, 0.5);
         sprite.inputEnabled = true;
         return new Her(sprite);
     }
