@@ -25,7 +25,6 @@ export class SmallFish {
 
     static create(game: Phaser.Game, x: number, y: number): SmallFish {
         let sprite = game.add.sprite(x, y, "small_fish");
-        //let sprite:Phaser.Sprite = new Phaser.Sprite(game, x, y, "small_fish");
         sprite.anchor.setTo(0.5);
         return new SmallFish(sprite);
     }
