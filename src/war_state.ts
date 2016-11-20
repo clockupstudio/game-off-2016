@@ -3,6 +3,7 @@ import { Her } from "./her";
 import { SmallFish } from "./small_fish";
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
+const SOUNDS_PATH = "assets/sounds";
 
 export class WarState extends Phaser.State {
 
@@ -14,6 +15,7 @@ export class WarState extends Phaser.State {
         this.game.load.image("her", `${SPRITESHEETS_PATH}/main_char.png`);
         this.game.load.image("small_fish", `${SPRITESHEETS_PATH}/small_fish.png`);
         this.game.load.image("bullet", `${SPRITESHEETS_PATH}/bullet.png`);
+        this.game.load.audio("shooting", `${SOUNDS_PATH}/shooting.ogg`);
     }
 
     create() {
