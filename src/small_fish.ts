@@ -12,15 +12,20 @@ export class SmallFish {
     }
 
     movedOutOfGame(): boolean {
-        return (this.sprite.y > 1080);
+        return (this.sprite.y > 3360);
     }
 
     destroy() {
         this.sprite.destroy();
     }
 
-    static create(game: Phaser.Game): SmallFish {
-        let sprite = game.add.sprite(game.world.centerX, game.world.centerY - 300, "small_fish");
+    addTo(group: Phaser.Group) {
+        group.add(this.sprite);
+    }
+
+    static create(game: Phaser.Game, x: number, y: number): SmallFish {
+        let sprite = game.add.sprite(x, y, "small_fish");
+        //let sprite:Phaser.Sprite = new Phaser.Sprite(game, x, y, "small_fish");
         sprite.anchor.setTo(0.5);
         return new SmallFish(sprite);
     }

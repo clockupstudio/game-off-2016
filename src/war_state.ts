@@ -13,6 +13,7 @@ export class WarState extends Phaser.State {
     private smallFish: SmallFish;
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
+    private enemyGroup: SmallFish[];
 
     preload() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -28,14 +29,28 @@ export class WarState extends Phaser.State {
         this.backgroundLayer = this.levelMap.createLayer('Background');
         this.backgroundLayer.resizeWorld();
 
-        this.smallFish = SmallFish.create(this.game);
+        
         this.herController = new HerController(this.game, this.createHer());
-
+        this.createEnemies();
         this.game.camera.y = 2280;
     }
 
+    createEnemies() {
+        
+        this.enemyGroup = [];
+
+        let origins = _.filter(this.levelMap.objects["Player"], (mapObject: any) => {
+            return mapObject.type === "enemy";
+        });
+
+        origins.forEach((element) => {
+            this.enemyGroup.push(SmallFish.create(this.game, element.x, element.y - 40));
+
+        });
+    }
+
     createHer(): Her {
-        var position: { x:number, y: number} = this.findHerOrigin();
+        let position: { x:number, y: number} = this.findHerOrigin();
         return Her.create(this.game, position.x, position.y);
     }
 
@@ -53,15 +68,14 @@ export class WarState extends Phaser.State {
     }
 
     update() {
-        console.log(this.camera.y)
         this.herController.update();
-        if (this.smallFish !== null) {
-            this.smallFish.move();
-            if (this.smallFish.movedOutOfGame()) {
-                this.smallFish.destroy();
-                this.smallFish = null;
+        this.enemyGroup.forEach((smallFish: SmallFish) => {
+            smallFish.move();
+            if (smallFish.movedOutOfGame()) {
+                smallFish.destroy();
+                smallFish = null;
             }
-        }
+        });
     }
 
     render() {
