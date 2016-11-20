@@ -52,5 +52,5 @@ jspm_packages
 # Mac Thumbnail
 .DS_Store
 
-# Visual studio code settings
+# VS code settings
 .vscode
