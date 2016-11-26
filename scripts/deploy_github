@@ -1,6 +1,6 @@
 git checkout gh-pages
 git pull origin gh-pages
-git merge origin/master
+git merge origin master
 
 npm install
 ./node_modules/.bin/typings install
