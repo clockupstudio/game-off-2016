@@ -7,12 +7,12 @@ export class Her {
 
     private fireRate = 200;
     private nextFire: number;
-    private shootingSound: Phaser.Sound;
     private herController: HerController;
+    private gun: Gun;
 
-    constructor(private herSprite: Phaser.Sprite) { 
-        this.shootingSound = new Phaser.Sound(this.herSprite.game, "shooting");
+    constructor(private herSprite: Phaser.Sprite) {
         this.herController = new HerController(this.herSprite.game, this);
+        this.gun = new Gun(this.herSprite.game, this.herSprite);
     }
 
     moveRight() {
@@ -32,15 +32,7 @@ export class Her {
     }
 
     fire() {
-        if (this.herSprite.game.time.time < this.nextFire) {
-            return;
-        }
-
-        const bullets = bullet.createDualBullets(this.herSprite.game, this.herSprite.x, this.herSprite.y);
-        this.shootingSound.play();
-        bullet.moveBullets(bullets);
-
-        this.nextFire = this.herSprite.game.time.time + this.fireRate;
+        this.gun.fire();
     }
 
     update() {
@@ -83,5 +75,30 @@ export class HerController {
         if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
             this.her.fire();
         }
+    }
+}
+
+const FIRE_RATE = 200;
+
+export class Gun {
+
+    private nextFire: number;
+    private shootingSound: Phaser.Sound;
+
+    constructor(private game: Phaser.Game, private herSprite: Phaser.Sprite) {
+        this.shootingSound = new Phaser.Sound(this.game, "shooting");
+        this.nextFire = 0;
+    }
+
+    fire() {
+        if (this.game.time.time < this.nextFire) {
+            return;
+        }
+
+        const bullets = bullet.createDualBullets(this.game, this.herSprite.x, this.herSprite.y);
+        this.shootingSound.play();
+        bullet.moveBullets(bullets);
+
+        this.nextFire = this.game.time.time + FIRE_RATE;
     }
 }
