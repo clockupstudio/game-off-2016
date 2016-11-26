@@ -47,6 +47,10 @@ export class Her {
         this.herController.update();
     }
 
+    destroy() {
+        this.herSprite.destroy();
+    }
+
     get sprite(): Phaser.Sprite {
         return this.herSprite;
     }
