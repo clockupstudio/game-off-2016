@@ -9,7 +9,7 @@ const TILEMAPS_PATH = "assets/tilemaps";
 
 export class WarState extends Phaser.State {
 
-    private herController: HerController;
+    private her: Her;
     private smallFish: SmallFish;
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
@@ -30,7 +30,7 @@ export class WarState extends Phaser.State {
         this.backgroundLayer.resizeWorld();
 
         
-        this.herController = new HerController(this.game, this.createHer());
+        this.her = this.createHer();
         this.createEnemies();
         this.game.camera.y = 2280;
     }
@@ -68,7 +68,7 @@ export class WarState extends Phaser.State {
     }
 
     update() {
-        this.herController.update();
+        this.her.update();
         this.enemyGroup.forEach((smallFish: SmallFish) => {
             smallFish.update()
         });
@@ -76,31 +76,5 @@ export class WarState extends Phaser.State {
 
     render() {
         this.game.debug.cameraInfo(this.game.camera, 32, 32);
-    }
-}
-
-export class HerController {
-
-    constructor(private game: Phaser.Game, private her: Her) {
-    }
-
-    update() {
-        if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
-            this.her.moveRight();
-        } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
-            this.her.moveLeft();
-        } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-            this.her.moveUp();
-        } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-            this.her.moveDown();
-        }
-
-        if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
-            this.her.fire();
-        }
-    }
-
-    get herSprite(): Phaser.Sprite{
-        return this.her.herSprite;
     }
 }
