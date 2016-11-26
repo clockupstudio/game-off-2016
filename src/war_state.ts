@@ -30,7 +30,7 @@ export class WarState extends Phaser.State {
         this.backgroundLayer.resizeWorld();
 
         
-        this.her = this.createHer();
+        this.createHer();
         this.createEnemies();
         this.game.camera.y = 2280;
     }
@@ -49,9 +49,9 @@ export class WarState extends Phaser.State {
         });
     }
 
-    createHer(): Her {
+    createHer() {
         let position: { x:number, y: number} = this.findHerOrigin();
-        return Her.create(this.game, position.x, position.y);
+        this.her = Her.create(this.game, position.x, position.y);
     }
 
     findHerOrigin(): {x: number, y: number} {
