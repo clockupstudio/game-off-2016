@@ -58,6 +58,7 @@ export class Her {
     static create(game: Phaser.Game, x: number, y: number): Her {
         let sprite = game.add.sprite(x, y, "her");
         sprite.inputEnabled = true;
+        game.physics.arcade.enable(sprite);
         return new Her(sprite);
     }
 

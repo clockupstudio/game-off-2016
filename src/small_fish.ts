@@ -33,6 +33,7 @@ export class SmallFish {
     static create(game: Phaser.Game, x: number, y: number): SmallFish {
         let sprite = game.add.sprite(x, y, "small_fish");
         sprite.anchor.setTo(0.5);
+        game.physics.arcade.enable(sprite);
         return new SmallFish(sprite);
     }
 }
