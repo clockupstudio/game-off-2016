@@ -94,13 +94,15 @@ export class WarState extends Phaser.State {
 
     update() {
         this.stageBackground.update();
-
         this.her.update();
-        this.enemyGroup.children.forEach((smallFish: SmallFish) => {
+
+        _.each(this.enemyGroup.children, (smallFish: SmallFish) => {
             smallFish.update()
         });
-        this.enemyGroup.children.forEach((smallFish: SmallFish) => {
+
+        _.each(this.enemyGroup.children, (smallFish: SmallFish) => {
             this.game.physics.arcade.collide(smallFish, this.her.sprite, () => {
+
                 this.her.destroy();
             });
         });
