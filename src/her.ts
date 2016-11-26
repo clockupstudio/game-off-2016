@@ -8,47 +8,80 @@ export class Her {
     private fireRate = 200;
     private nextFire: number;
     private shootingSound: Phaser.Sound;
+    private herController: HerController;
 
-    constructor(private sprite: Phaser.Sprite) { 
-        this.shootingSound = new Phaser.Sound(this.sprite.game, "shooting");
+    constructor(private herSprite: Phaser.Sprite) { 
+        this.shootingSound = new Phaser.Sound(this.herSprite.game, "shooting");
+        this.herController = new HerController(this.herSprite.game, this);
     }
 
     moveRight() {
-        this.sprite.x += VELOCITY;
+        this.herSprite.x += VELOCITY;
     }
 
     moveLeft() {
-        this.sprite.x -= VELOCITY;
+        this.herSprite.x -= VELOCITY;
     }
 
     moveUp() {
-        this.sprite.y -= VELOCITY;
+        this.herSprite.y -= VELOCITY;
     }
 
     moveDown() {
-        this.sprite.y += VELOCITY;
+        this.herSprite.y += VELOCITY;
     }
 
     fire() {
-        if (this.sprite.game.time.time < this.nextFire) {
+        if (this.herSprite.game.time.time < this.nextFire) {
             return;
         }
 
-        const bullets = bullet.createDualBullets(this.sprite.game, this.sprite.x, this.sprite.y);
+        const bullets = bullet.createDualBullets(this.herSprite.game, this.herSprite.x, this.herSprite.y);
         this.shootingSound.play();
         bullet.moveBullets(bullets);
 
-        this.nextFire = this.sprite.game.time.time + this.fireRate;
+        this.nextFire = this.herSprite.game.time.time + this.fireRate;
     }
 
-    get herSprite(): Phaser.Sprite {
-        return this.sprite;
+    update() {
+        this.herController.update();
+    }
+
+    destroy() {
+        this.herSprite.destroy();
+    }
+
+    get sprite(): Phaser.Sprite {
+        return this.herSprite;
     }
 
     static create(game: Phaser.Game, x: number, y: number): Her {
         let sprite = game.add.sprite(x, y, "her");
         sprite.inputEnabled = true;
+        game.physics.arcade.enable(sprite);
         return new Her(sprite);
     }
 
+}
+
+export class HerController {
+
+    constructor(private game: Phaser.Game, private her: Her) {
+    }
+
+    update() {
+        if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+            this.her.moveRight();
+        } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+            this.her.moveLeft();
+        } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+            this.her.moveUp();
+        } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+            this.her.moveDown();
+        }
+
+        if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
+            this.her.fire();
+        }
+    }
 }
