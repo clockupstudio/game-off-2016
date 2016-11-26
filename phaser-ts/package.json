@@ -1,0 +1,13 @@
+{
+    "name": "phaser-ts",
+    "version": "1.0.0",
+    "description": "Reference the `phaser.d.ts` in your project.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "typescript": "./phaser.comments.d.ts"
+}

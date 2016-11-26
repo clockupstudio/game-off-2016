@@ -5,7 +5,7 @@
         "noImplicitAny": false,
         "sourceMap": false
     },
-    "excludes": [
+    "exclude": [
         "node_modules"
     ]
 }
