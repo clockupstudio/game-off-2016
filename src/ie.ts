@@ -13,11 +13,11 @@ export default class IE extends Phaser.Sprite {
     }
 
     update() {
-        if(this.dead){
+        if (this.dead) {
             return;
         }
 
-        if(this.y > (this.game.world.height-1000)){
+        if (this.y > (this.game.world.height - 1000)) {
             this.animations.play(IEAnimations.DIE);
             this.dead = true;
             return;

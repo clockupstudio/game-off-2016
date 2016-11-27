@@ -7,7 +7,7 @@ import { PowerUp } from "./power_up";
 import PowerUpGroup from "./power_up_group";
 import { TileObject } from "./tile_object";
 import MediumFish from "./medium_fish";
-import { Enemy } from "./enemy"; 
+import { Enemy } from "./enemy";
 import IE from "./ie";
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
