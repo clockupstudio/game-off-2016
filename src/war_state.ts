@@ -4,6 +4,7 @@ import { SmallFish } from "./small_fish";
 import * as _ from "lodash";
 import StageBackground from "./stage_background";
 import { PowerUp } from "./power_up";
+import PowerUpGroup from "./power_up_group";
 
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
@@ -17,8 +18,10 @@ export class WarState extends Phaser.State {
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
     private enemyGroup: SmallFish[];
+
     private stageBackground: StageBackground;
-    private powerUpGroup: PowerUp[]; 
+    private powerUpGroup: PowerUpGroup; 
+
 
     preload() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -73,10 +76,10 @@ export class WarState extends Phaser.State {
     }
 
     createItems() {
-        this.powerUpGroup = [];
+        this.powerUpGroup = new PowerUpGroup();
         
         this.findObjectOrigins("item").forEach((element) => {
-            this.powerUpGroup.push(PowerUp.create(this.game, element.x, element.y));
+            this.powerUpGroup.add(PowerUp.create(this.game, element.x, element.y));
         });
     }
 
@@ -105,14 +108,8 @@ export class WarState extends Phaser.State {
             });
         });
 
-        _.forEach(this.powerUpGroup, (powerUp: PowerUp) => {
-            this.game.physics.arcade.collide(powerUp.sprite, this.her.sprite, (collidedPowerUp) => {
-                collidedPowerUp.destroy();
-            });
-        });
-        _.forEach(this.powerUpGroup, (powerUp: PowerUp) => {
-            powerUp.update();
-        });
+        this.powerUpGroup.checkCollisionWith(this.game, this.her);
+        this.powerUpGroup.update();
     }
 
     render() {
