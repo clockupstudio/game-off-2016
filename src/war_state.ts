@@ -10,6 +10,7 @@ import MediumFish from "./medium_fish";
 import { Enemy } from "./enemy";
 import IE from "./ie";
 
+
 const SPRITESHEETS_PATH = "assets/spritesheets";
 const SOUNDS_PATH = "assets/sounds";
 const TILEMAPS_PATH = "assets/tilemaps";
@@ -37,6 +38,7 @@ export class WarState extends Phaser.State {
         this.game.load.image("stage_background", `${SPRITESHEETS_PATH}/stage.png`);
         this.game.load.image("medium_fish", `${SPRITESHEETS_PATH}/medium_fish.png`);
         this.game.load.spritesheet("boss_ie", `${SPRITESHEETS_PATH}/boss_stage_1.png`, 360, 460, 2);
+        this.game.load.spritesheet("explosion", `${SPRITESHEETS_PATH}/explosion.png`, 587, 581, 8);
     }
 
     create() {
