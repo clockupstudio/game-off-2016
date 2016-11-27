@@ -10,7 +10,7 @@ export function moveBullets(bullets: Bullet[]) {
 export function createDualBullets(game: Phaser.Game, x: number, y: number): Bullet[] {
     return [
         new Bullet(game, x + 25, y + 30),
-        new Bullet(game, x + (160-25), y + 30),
+        new Bullet(game, x + (160 - 25), y + 30),
     ];
 }
 
@@ -19,6 +19,5 @@ class Bullet extends Phaser.Sprite {
         super(game, x, y, "bullet");
         game.add.existing(this);
         game.physics.arcade.enable(this);
-        this.sendToBack();
     }
 }
