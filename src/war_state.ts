@@ -14,6 +14,7 @@ export class WarState extends Phaser.State {
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
     private enemyGroup: SmallFish[];
+    private stageBackground: Phaser.TileSprite;
 
     preload() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -22,9 +23,13 @@ export class WarState extends Phaser.State {
         this.game.load.image("bullet", `${SPRITESHEETS_PATH}/bullet.png`);
         this.game.load.audio("shooting", `${SOUNDS_PATH}/shooting.ogg`);
         this.game.load.tilemap("level_01", `${TILEMAPS_PATH}/level_01.json`, null, Phaser.Tilemap.TILED_JSON);
+        this.game.load.image("stage_background", `${SPRITESHEETS_PATH}/stage.png`);
     }
 
     create() {
+
+        this.stageBackground = this.game.add.tileSprite((1920/2)-(1080/2), 2280, 1080, 1920, "stage_background");
+
         this.levelMap = this.game.add.tilemap("level_01");
         this.backgroundLayer = this.levelMap.createLayer('Background');
         this.backgroundLayer.resizeWorld();
@@ -68,6 +73,9 @@ export class WarState extends Phaser.State {
     }
 
     update() {
+
+        this.stageBackground.tilePosition.y += 1;
+
         this.her.update();
         this.enemyGroup.forEach((smallFish: SmallFish) => {
             smallFish.update()
