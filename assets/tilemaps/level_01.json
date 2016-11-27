@@ -394,8 +394,8 @@
                  "type":"enemy",
                  "visible":true,
                  "width":80,
-                 "x":1162.70214696099,
-                 "y":1306.62715452071
+                 "x":1162.7,
+                 "y":1306.63
                 }, 
                 {
                  "gid":4,
@@ -414,8 +414,28 @@
                  "type":"enemy",
                  "visible":true,
                  "width":80,
-                 "x":524.661626852132,
-                 "y":843.972180223768
+                 "x":524.662,
+                 "y":843.972
+                }, 
+                {
+                 "gid":5,
+                 "height":460,
+                 "id":32,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"boss_ie"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":360,
+                 "x":801.962800120956,
+                 "y":78.4223677048687
                 }],
          "offsetx":152,
          "offsety":-48,
@@ -437,7 +457,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":32,
+ "nextobjectid":33,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tileheight":80,
@@ -493,6 +513,19 @@
          "tilecount":1,
          "tileheight":80,
          "tilewidth":80
+        }, 
+        {
+         "columns":2,
+         "firstgid":5,
+         "image":"..\/spritesheets\/boss_stage_1.png",
+         "imageheight":462,
+         "imagewidth":720,
+         "margin":0,
+         "name":"boss_ie",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":460,
+         "tilewidth":360
         }],
  "tilewidth":80,
  "version":1,
