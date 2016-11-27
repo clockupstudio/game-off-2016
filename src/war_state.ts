@@ -2,6 +2,7 @@ import * as Phaser from "phaser";
 import { Her } from "./her";
 import { SmallFish } from "./small_fish";
 import * as _ from "lodash";
+import StageBackground from "./stage_background";
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
 const SOUNDS_PATH = "assets/sounds";
@@ -14,6 +15,7 @@ export class WarState extends Phaser.State {
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
     private enemyGroup: SmallFish[];
+    private stageBackground: StageBackground;
 
     preload() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -22,14 +24,17 @@ export class WarState extends Phaser.State {
         this.game.load.image("bullet", `${SPRITESHEETS_PATH}/bullet.png`);
         this.game.load.audio("shooting", `${SOUNDS_PATH}/shooting.ogg`);
         this.game.load.tilemap("level_01", `${TILEMAPS_PATH}/level_01.json`, null, Phaser.Tilemap.TILED_JSON);
+        this.game.load.image("stage_background", `${SPRITESHEETS_PATH}/stage.png`);
     }
 
     create() {
+        this.stageBackground = StageBackground.create(this.game);
+        this.game.world.add(this.stageBackground);
+
         this.levelMap = this.game.add.tilemap("level_01");
         this.backgroundLayer = this.levelMap.createLayer('Background');
         this.backgroundLayer.resizeWorld();
 
-        
         this.createHer();
         this.createEnemies();
         this.game.camera.y = 2280;
@@ -68,6 +73,8 @@ export class WarState extends Phaser.State {
     }
 
     update() {
+        this.stageBackground.update();
+
         this.her.update();
         this.enemyGroup.forEach((smallFish: SmallFish) => {
             smallFish.update()
