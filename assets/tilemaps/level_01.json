@@ -334,8 +334,8 @@
                  "type":"item",
                  "visible":true,
                  "width":120,
-                 "x":731.453280919262,
-                 "y":1988.85878439673
+                 "x":731.453,
+                 "y":1988.86
                 }, 
                 {
                  "gid":3,
@@ -354,8 +354,8 @@
                  "type":"item",
                  "visible":true,
                  "width":120,
-                 "x":737.501058361052,
-                 "y":1260.10160266102
+                 "x":737.501,
+                 "y":1260.1
                 }, 
                 {
                  "gid":3,
@@ -374,8 +374,48 @@
                  "type":"item",
                  "visible":true,
                  "width":120,
-                 "x":1227.37103114605,
-                 "y":371.078318717871
+                 "x":1227.37,
+                 "y":371.078
+                }, 
+                {
+                 "gid":4,
+                 "height":80,
+                 "id":30,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"medium_fish"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":80,
+                 "x":1162.70214696099,
+                 "y":1306.62715452071
+                }, 
+                {
+                 "gid":4,
+                 "height":80,
+                 "id":31,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"medium_fish"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":80,
+                 "x":524.661626852132,
+                 "y":843.972180223768
                 }],
          "offsetx":152,
          "offsety":-48,
@@ -397,7 +437,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":30,
+ "nextobjectid":32,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tileheight":80,
@@ -440,6 +480,19 @@
          "tilecount":1,
          "tileheight":120,
          "tilewidth":120
+        }, 
+        {
+         "columns":1,
+         "firstgid":4,
+         "image":"..\/spritesheets\/medium_fish.png",
+         "imageheight":80,
+         "imagewidth":80,
+         "margin":0,
+         "name":"medium_fish",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":80,
+         "tilewidth":80
         }],
  "tilewidth":80,
  "version":1,

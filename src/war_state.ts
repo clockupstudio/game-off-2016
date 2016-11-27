@@ -6,6 +6,8 @@ import StageBackground from "./stage_background";
 import { PowerUp } from "./power_up";
 import PowerUpGroup from "./power_up_group";
 import { TileObject } from "./tile_object";
+import MediumFish from "./medium_fish";
+import { Enemy } from "./enemy"; 
 
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
@@ -78,6 +80,9 @@ export class WarState extends Phaser.State {
             if (element.properties.sprite === "small_fish") {
                 this.enemyGroup.add(SmallFish.create(this.game, element.x, element.y - 40));
             }
+            if (element.properties.sprite === "medium_fish") {
+                this.enemyGroup.add(MediumFish.create(this.game, element.x, element.y));
+            }
         });
     }
 
@@ -99,13 +104,12 @@ export class WarState extends Phaser.State {
         this.stageBackground.update();
         this.her.update();
 
-        _.each(this.enemyGroup.children, (smallFish: SmallFish) => {
-            smallFish.update()
+        _.each(this.enemyGroup.children, (enemy: Enemy) => {
+            enemy.update()
         });
 
-        _.each(this.enemyGroup.children, (smallFish: SmallFish) => {
-            this.game.physics.arcade.collide(smallFish, this.her.sprite, () => {
-
+        _.each(this.enemyGroup.children, (enemy: Enemy) => {
+            this.game.physics.arcade.collide(enemy, this.her.sprite, () => {
                 this.her.destroy();
             });
         });
