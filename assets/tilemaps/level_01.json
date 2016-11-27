@@ -394,8 +394,28 @@
                  "type":"enemy",
                  "visible":true,
                  "width":80,
-                 "x":1238.29936498337,
-                 "y":2745.99818566677
+                 "x":1162.70214696099,
+                 "y":1306.62715452071
+                }, 
+                {
+                 "gid":4,
+                 "height":80,
+                 "id":31,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"medium_fish"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":80,
+                 "x":524.661626852132,
+                 "y":843.972180223768
                 }],
          "offsetx":152,
          "offsety":-48,
@@ -417,7 +437,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":31,
+ "nextobjectid":32,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tileheight":80,
