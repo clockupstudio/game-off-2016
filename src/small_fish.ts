@@ -20,9 +20,6 @@ export class SmallFish extends Phaser.Sprite {
 
     update() {
         this.move();
-        if (this.movedOutOfGame()) {
-            this.destroy();
-        }
     }
 
 
