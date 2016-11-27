@@ -35,7 +35,6 @@ export class WarState extends Phaser.State {
         this.backgroundLayer = this.levelMap.createLayer('Background');
         this.backgroundLayer.resizeWorld();
 
-        
         this.createHer();
         this.createEnemies();
         this.game.camera.y = 2280;
