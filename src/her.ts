@@ -8,11 +8,9 @@ export class Her {
     private fireRate = 200;
     private nextFire: number;
     private herController: HerController;
-    private gun: Gun;
 
     constructor(private herSprite: Phaser.Sprite) {
         this.herController = new HerController(this.herSprite.game, this);
-        this.gun = new Gun(this.herSprite.game, this.herSprite);
     }
 
     moveRight() {
@@ -31,13 +29,8 @@ export class Her {
         this.herSprite.y += VELOCITY;
     }
 
-    fire() {
-        this.gun.fire();
-    }
-
     update() {
         this.herController.update();
-        this.gun.update();
     }
 
     destroy() {
