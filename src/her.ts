@@ -59,9 +59,13 @@ export class HerController {
 
     update() {
         if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
-            this.her.moveRight();
+            if ((this.her.sprite.x + 160) < 1500) {
+                this.her.moveRight();
+            }
         } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
-            this.her.moveLeft();
+            if (this.her.sprite.x > 420) {
+                this.her.moveLeft();
+            }
         } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
             this.her.moveUp();
         } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
