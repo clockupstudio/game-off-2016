@@ -336,6 +336,46 @@
                  "width":120,
                  "x":731.453280919262,
                  "y":1988.85878439673
+                }, 
+                {
+                 "gid":3,
+                 "height":120,
+                 "id":28,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"power_up"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"item",
+                 "visible":true,
+                 "width":120,
+                 "x":737.501058361052,
+                 "y":1260.10160266102
+                }, 
+                {
+                 "gid":3,
+                 "height":120,
+                 "id":29,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"power_up"
+                    },
+                 "propertytypes":
+                    {
+                     "sprite":"string"
+                    },
+                 "rotation":0,
+                 "type":"item",
+                 "visible":true,
+                 "width":120,
+                 "x":1227.37103114605,
+                 "y":371.078318717871
                 }],
          "offsetx":152,
          "offsety":-48,
@@ -357,7 +397,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":25,
+ "nextobjectid":30,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tileheight":80,
