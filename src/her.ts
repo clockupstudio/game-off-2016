@@ -1,5 +1,5 @@
 import * as Phaser from "phaser";
-import * as bullet from "./bullet";
+import { DualBullet } from "./bullet";
 
 const VELOCITY = 10;
 
@@ -81,7 +81,7 @@ export class Gun {
 
     private nextFire: number;
     private shootingSound: Phaser.Sound;
-    private dualBullets: bullet.Bullet[];
+    private dualBullets: DualBullet;
 
 
     constructor(private game: Phaser.Game, private herSprite: Phaser.Sprite) {
@@ -94,9 +94,8 @@ export class Gun {
             return;
         }
 
-        this.dualBullets = bullet.createDualBullets(this.game, this.herSprite.x, this.herSprite.y);
+        this.dualBullets = new DualBullet(this.game, this.herSprite.x, this.herSprite.y);
         this.shootingSound.play();
-        bullet.moveBullets(this.dualBullets);
 
         this.nextFire = this.game.time.time + FIRE_RATE;
     }
