@@ -1,5 +1,6 @@
 import * as Phaser from "phaser";
-import * as bullet from "./bullet";
+import * as _ from "lodash";
+import { DualBullet } from "./bullet";
 
 const VELOCITY = 10;
 
@@ -7,11 +8,9 @@ export class Her {
 
     private fireRate = 200;
     private nextFire: number;
-    private shootingSound: Phaser.Sound;
     private herController: HerController;
 
-    constructor(private herSprite: Phaser.Sprite) { 
-        this.shootingSound = new Phaser.Sound(this.herSprite.game, "shooting");
+    constructor(private herSprite: Phaser.Sprite) {
         this.herController = new HerController(this.herSprite.game, this);
     }
 
@@ -29,18 +28,6 @@ export class Her {
 
     moveDown() {
         this.herSprite.y += VELOCITY;
-    }
-
-    fire() {
-        if (this.herSprite.game.time.time < this.nextFire) {
-            return;
-        }
-
-        const bullets = bullet.createDualBullets(this.herSprite.game, this.herSprite.x, this.herSprite.y);
-        this.shootingSound.play();
-        bullet.moveBullets(bullets);
-
-        this.nextFire = this.herSprite.game.time.time + this.fireRate;
     }
 
     update() {
@@ -79,9 +66,50 @@ export class HerController {
         } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
             this.her.moveDown();
         }
+    }
+}
 
+const FIRE_RATE = 200;
+
+export class Gun {
+
+    private nextFire: number;
+    private shootingSound: Phaser.Sound;
+    private dualBullets: DualBullet[];
+
+
+    constructor(private game: Phaser.Game, private herSprite: Phaser.Sprite) {
+        this.shootingSound = new Phaser.Sound(this.game, "shooting");
+        this.dualBullets = [];
+        this.nextFire = 0;
+    }
+
+    fire() {
+        if (this.game.time.time < this.nextFire) {
+            return;
+        }
+
+        this.dualBullets.push(new DualBullet(this.game, this.herSprite.x, this.herSprite.y));
+        this.shootingSound.play();
+
+        this.nextFire = this.game.time.time + FIRE_RATE;
+    }
+
+    collideWith(enemies: Phaser.Group) {
+        _.each(this.dualBullets, (dualBullet: DualBullet) => {
+            this.game.physics.arcade.collide(dualBullet, enemies, (bullet, enemy) => {
+                if (bullet.visible) {
+                    bullet.visible = false;
+                    dualBullet.remove(bullet);
+                    enemy.destroy();
+                }
+            });
+        });
+    }
+
+    update() {
         if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
-            this.her.fire();
+            this.fire();
         }
     }
 }

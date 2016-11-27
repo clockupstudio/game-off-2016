@@ -1,5 +1,5 @@
 import * as Phaser from "phaser";
-import { Her } from "./her";
+import { Her, Gun } from "./her";
 import { SmallFish } from "./small_fish";
 import * as _ from "lodash";
 import StageBackground from "./stage_background";
@@ -21,6 +21,7 @@ export class WarState extends Phaser.State {
     private enemyGroup: Phaser.Group;
     private stageBackground: StageBackground;
     private powerUpGroup: PowerUpGroup;
+    private gun: Gun
 
 
     preload() {
@@ -48,6 +49,8 @@ export class WarState extends Phaser.State {
         this.createItems();
 
         this.game.camera.y = 2280;
+
+        this.gun = new Gun(this.game, this.her.sprite);
     }
 
     createHer() {
@@ -94,19 +97,24 @@ export class WarState extends Phaser.State {
 
     update() {
         this.stageBackground.update();
-
         this.her.update();
-        this.enemyGroup.children.forEach((smallFish: SmallFish) => {
+
+        _.each(this.enemyGroup.children, (smallFish: SmallFish) => {
             smallFish.update()
         });
-        this.enemyGroup.children.forEach((smallFish: SmallFish) => {
+
+        _.each(this.enemyGroup.children, (smallFish: SmallFish) => {
             this.game.physics.arcade.collide(smallFish, this.her.sprite, () => {
+
                 this.her.destroy();
             });
         });
 
         this.powerUpGroup.checkCollisionWith(this.game, this.her);
         this.powerUpGroup.update();
+
+        this.gun.collideWith(this.enemyGroup);
+        this.gun.update();
     }
 
     render() {
