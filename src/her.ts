@@ -1,6 +1,7 @@
 import * as Phaser from "phaser";
 import * as _ from "lodash";
 import { DualBullet } from "./bullet";
+import { Explosion } from "./explosion";
 
 const VELOCITY = 10;
 
@@ -101,7 +102,8 @@ export class Gun {
                 if (bullet.visible) {
                     bullet.visible = false;
                     dualBullet.remove(bullet);
-                    enemy.destroy();
+
+                    explodeEnemy(this.game, enemy);
                 }
             });
         });
@@ -112,4 +114,14 @@ export class Gun {
             this.fire();
         }
     }
+}
+
+function explodeEnemy(game: Phaser.Game, enemy: Phaser.Sprite) {
+    const [x, y] = [enemy.x, enemy.y];
+    enemy.destroy();
+    const explosion = new Explosion(game, x, y);
+    explosion.explode().onComplete.add(() => {
+        explosion.destroy();
+    });
+
 }
