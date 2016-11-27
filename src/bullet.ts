@@ -12,6 +12,7 @@ export function createDualBullets(game: Phaser.Game, x: number, y: number): Bull
 export class Bullet extends Phaser.Sprite {
     constructor(game: Phaser.Game, x: number, y: number) {
         super(game, x, y, "bullet");
+        this.scale.setTo(2, 2);
         game.add.existing(this);
         game.physics.arcade.enable(this);
     }

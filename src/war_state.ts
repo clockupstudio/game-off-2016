@@ -113,6 +113,7 @@ export class WarState extends Phaser.State {
         this.powerUpGroup.checkCollisionWith(this.game, this.her);
         this.powerUpGroup.update();
 
+        this.gun.collideWith(this.enemyGroup);
         this.gun.update();
     }
 

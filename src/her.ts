@@ -1,4 +1,5 @@
 import * as Phaser from "phaser";
+import * as _ from "lodash";
 import { DualBullet } from "./bullet";
 
 const VELOCITY = 10;
@@ -74,11 +75,12 @@ export class Gun {
 
     private nextFire: number;
     private shootingSound: Phaser.Sound;
-    private dualBullets: DualBullet;
+    private dualBullets: DualBullet[];
 
 
     constructor(private game: Phaser.Game, private herSprite: Phaser.Sprite) {
         this.shootingSound = new Phaser.Sound(this.game, "shooting");
+        this.dualBullets = [];
         this.nextFire = 0;
     }
 
@@ -87,10 +89,22 @@ export class Gun {
             return;
         }
 
-        this.dualBullets = new DualBullet(this.game, this.herSprite.x, this.herSprite.y);
+        this.dualBullets.push(new DualBullet(this.game, this.herSprite.x, this.herSprite.y));
         this.shootingSound.play();
 
         this.nextFire = this.game.time.time + FIRE_RATE;
+    }
+
+    collideWith(enemies: Phaser.Group) {
+        _.each(this.dualBullets, (dualBullet: DualBullet) => {
+            this.game.physics.arcade.collide(dualBullet, enemies, (bullet, enemy) => {
+                if (bullet.visible) {
+                    bullet.visible = false;
+                    dualBullet.remove(bullet);
+                    enemy.destroy();
+                }
+            });
+        });
     }
 
     update() {
