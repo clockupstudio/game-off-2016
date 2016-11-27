@@ -89,6 +89,7 @@ export class WarState extends Phaser.State {
         });
     }
 
+
     findObjectOrigins(type: string): TileObject[] {
         return _.filter(this.levelMap.objects["Player"], (mapObject: any) => {
             return mapObject.type === type;
