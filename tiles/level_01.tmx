@@ -117,7 +117,7 @@
     <property name="sprite" value="medium_fish"/>
    </properties>
   </object>
-  <object id="32" type="enemy" gid="5" x="756.604" y="1883.68" width="360" height="460">
+  <object id="32" type="enemy" gid="5" x="801.963" y="78.4224" width="360" height="460">
    <properties>
     <property name="sprite" value="boss_ie"/>
    </properties>
