@@ -110,11 +110,9 @@ export class WarState extends Phaser.State {
                 collidedPowerUp.destroy();
             });
         });
-        // this.powerUpGroup.forEach((powerUp: PowerUp) => {
-        //     this.game.physics.arcade.collide(powerUp.sprite, this.her.sprite, (collidedPowerUp) => {
-        //         collidedPowerUp.destroy();
-        //     });
-        // });
+        _.forEach(this.powerUpGroup, (powerUp: PowerUp) => {
+            powerUp.update();
+        });
     }
 
     render() {

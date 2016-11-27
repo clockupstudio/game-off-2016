@@ -86,7 +86,7 @@
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="23" type="item" gid="3" x="722.382" y="2923.24" width="120" height="120">
+  <object id="23" type="item" gid="3" x="731.453" y="1988.86" width="120" height="120">
    <properties>
     <property name="sprite" value="power_up"/>
    </properties>
