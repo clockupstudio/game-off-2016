@@ -36,6 +36,7 @@ export class WarState extends Phaser.State {
         this.game.load.tilemap("level_01", `${TILEMAPS_PATH}/level_01.json`, null, Phaser.Tilemap.TILED_JSON);
         this.game.load.image("stage_background", `${SPRITESHEETS_PATH}/stage.png`);
         this.game.load.image("medium_fish", `${SPRITESHEETS_PATH}/medium_fish.png`);
+        this.game.load.spritesheet("boss_ie", `${SPRITESHEETS_PATH}/boss_stage_1.png`, 360, 460, 2);
     }
 
     create() {
@@ -82,6 +83,9 @@ export class WarState extends Phaser.State {
             }
             if (element.properties.sprite === "medium_fish") {
                 this.enemyGroup.add(MediumFish.create(this.game, element.x, element.y));
+            }
+            if (element.properties.sprite === "boss_ie") {
+                this.enemyGroup.add(this.game.add.sprite(element.x, element.y, "boss_ie"));
             }
         });
     }
