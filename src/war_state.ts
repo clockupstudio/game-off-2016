@@ -39,6 +39,7 @@ export class WarState extends Phaser.State {
         this.game.load.image("medium_fish", `${SPRITESHEETS_PATH}/medium_fish.png`);
         this.game.load.spritesheet("boss_ie", `${SPRITESHEETS_PATH}/boss_stage_1.png`, 360, 460, 2);
         this.game.load.spritesheet("explosion", `${SPRITESHEETS_PATH}/explosion.png`, 587, 581, 8);
+        this.game.load.image("evil_bullet", `${SPRITESHEETS_PATH}/evil_bullet.png`);
     }
 
     create() {
@@ -84,7 +85,7 @@ export class WarState extends Phaser.State {
                 this.enemyGroup.add(SmallFish.create(this.game, element.x, element.y - 40));
             }
             if (element.properties.sprite === "medium_fish") {
-                this.enemyGroup.add(MediumFish.create(this.game, element.x, element.y));
+                this.enemyGroup.add(MediumFish.create(this.game, element.x, element.y, this.her));
             }
             if (element.properties.sprite === "boss_ie") {
                 this.enemyGroup.add(new IE(this.game, element.x, element.y));
