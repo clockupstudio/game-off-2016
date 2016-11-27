@@ -5,6 +5,7 @@ import * as _ from "lodash";
 import StageBackground from "./stage_background";
 import { PowerUp } from "./power_up";
 import PowerUpGroup from "./power_up_group";
+import { TileObject } from "./tile_object";
 
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
@@ -17,9 +18,9 @@ export class WarState extends Phaser.State {
     private smallFish: SmallFish;
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
-    private enemyGroup: SmallFish[];
+    private enemyGroup: Phaser.Group;
     private stageBackground: StageBackground;
-    private powerUpGroup: PowerUpGroup; 
+    private powerUpGroup: PowerUpGroup;
 
 
     preload() {
@@ -31,6 +32,7 @@ export class WarState extends Phaser.State {
         this.game.load.audio("shooting", `${SOUNDS_PATH}/shooting.ogg`);
         this.game.load.tilemap("level_01", `${TILEMAPS_PATH}/level_01.json`, null, Phaser.Tilemap.TILED_JSON);
         this.game.load.image("stage_background", `${SPRITESHEETS_PATH}/stage.png`);
+        this.game.load.image("medium_fish", `${SPRITESHEETS_PATH}/medium_fish.png`);
     }
 
     create() {
@@ -44,6 +46,7 @@ export class WarState extends Phaser.State {
         this.createHer();
         this.createEnemies();
         this.createItems();
+
         this.game.camera.y = 2280;
     }
 
@@ -66,29 +69,24 @@ export class WarState extends Phaser.State {
     }
 
     createEnemies() {
-        this.enemyGroup = [];
+        this.enemyGroup = this.game.add.group();
 
-        this.findObjectOrigins("enemy").forEach((element) => {
-            this.enemyGroup.push(SmallFish.create(this.game, element.x, element.y - 40));
-
+        this.findObjectOrigins("enemy").forEach((element: TileObject) => {
+            if (element.properties.sprite === "small_fish") {
+                this.enemyGroup.add(SmallFish.create(this.game, element.x, element.y - 40));
+            }
         });
     }
 
     createItems() {
         this.powerUpGroup = new PowerUpGroup();
 
-        this.findObjectOrigins("item").forEach((element) => {
+        this.findObjectOrigins("item").forEach((element: TileObject) => {
             this.powerUpGroup.add(PowerUp.create(this.game, element.x, element.y));
         });
     }
 
-    createObjectFromMap(type: string, group: any[], createFunction: () => {}) {
-        this.findObjectOrigins(type).forEach((element) => {
-            group.push(createFunction());
-        });
-    }
-
-    findObjectOrigins(type: string): { x: number, y: number }[] {
+    findObjectOrigins(type: string): TileObject[] {
         return _.filter(this.levelMap.objects["Player"], (mapObject: any) => {
             return mapObject.type === type;
         });
@@ -98,11 +96,11 @@ export class WarState extends Phaser.State {
         this.stageBackground.update();
 
         this.her.update();
-        this.enemyGroup.forEach((smallFish: SmallFish) => {
+        this.enemyGroup.children.forEach((smallFish: SmallFish) => {
             smallFish.update()
         });
-        this.enemyGroup.forEach((smallFish: SmallFish) => {
-            this.game.physics.arcade.collide(smallFish.sprite, this.her.sprite, () => {
+        this.enemyGroup.children.forEach((smallFish: SmallFish) => {
+            this.game.physics.arcade.collide(smallFish, this.her.sprite, () => {
                 this.her.destroy();
             });
         });
