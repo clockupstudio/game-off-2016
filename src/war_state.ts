@@ -31,6 +31,7 @@ export class WarState extends Phaser.State {
         this.game.load.audio("shooting", `${SOUNDS_PATH}/shooting.ogg`);
         this.game.load.tilemap("level_01", `${TILEMAPS_PATH}/level_01.json`, null, Phaser.Tilemap.TILED_JSON);
         this.game.load.image("stage_background", `${SPRITESHEETS_PATH}/stage.png`);
+        this.game.load.image("medium_fish", `${SPRITESHEETS_PATH}/medium_fish.png`);
     }
 
     create() {
@@ -44,6 +45,7 @@ export class WarState extends Phaser.State {
         this.createHer();
         this.createEnemies();
         this.createItems();
+
         this.game.camera.y = 2280;
     }
 
@@ -70,7 +72,6 @@ export class WarState extends Phaser.State {
 
         this.findObjectOrigins("enemy").forEach((element) => {
             this.enemyGroup.push(SmallFish.create(this.game, element.x, element.y - 40));
-
         });
     }
 
@@ -79,12 +80,6 @@ export class WarState extends Phaser.State {
 
         this.findObjectOrigins("item").forEach((element) => {
             this.powerUpGroup.add(PowerUp.create(this.game, element.x, element.y));
-        });
-    }
-
-    createObjectFromMap(type: string, group: any[], createFunction: () => {}) {
-        this.findObjectOrigins(type).forEach((element) => {
-            group.push(createFunction());
         });
     }
 
