@@ -2,6 +2,7 @@ import * as Phaser from "phaser";
 import { Her } from "./her";
 import { SmallFish } from "./small_fish";
 import * as _ from "lodash";
+import StageBackground from "./stage_background";
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
 const SOUNDS_PATH = "assets/sounds";
@@ -14,7 +15,7 @@ export class WarState extends Phaser.State {
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
     private enemyGroup: SmallFish[];
-    private stageBackground: Phaser.TileSprite;
+    private stageBackground: StageBackground;
 
     preload() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -27,8 +28,8 @@ export class WarState extends Phaser.State {
     }
 
     create() {
-
-        this.stageBackground = this.game.add.tileSprite((1920/2)-(1080/2), 2280, 1080, 1920, "stage_background");
+        this.stageBackground = StageBackground.create(this.game);
+        this.game.world.add(this.stageBackground);
 
         this.levelMap = this.game.add.tilemap("level_01");
         this.backgroundLayer = this.levelMap.createLayer('Background');
@@ -73,8 +74,7 @@ export class WarState extends Phaser.State {
     }
 
     update() {
-
-        this.stageBackground.tilePosition.y += 1;
+        this.stageBackground.update();
 
         this.her.update();
         this.enemyGroup.forEach((smallFish: SmallFish) => {
