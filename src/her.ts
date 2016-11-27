@@ -37,6 +37,7 @@ export class Her {
 
     update() {
         this.herController.update();
+        this.gun.update();
     }
 
     destroy() {
@@ -71,10 +72,6 @@ export class HerController {
         } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
             this.her.moveDown();
         }
-
-        if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
-            this.her.fire();
-        }
     }
 }
 
@@ -84,6 +81,8 @@ export class Gun {
 
     private nextFire: number;
     private shootingSound: Phaser.Sound;
+    private dualBullets: bullet.Bullet[];
+
 
     constructor(private game: Phaser.Game, private herSprite: Phaser.Sprite) {
         this.shootingSound = new Phaser.Sound(this.game, "shooting");
@@ -95,10 +94,16 @@ export class Gun {
             return;
         }
 
-        const bullets = bullet.createDualBullets(this.game, this.herSprite.x, this.herSprite.y);
+        this.dualBullets = bullet.createDualBullets(this.game, this.herSprite.x, this.herSprite.y);
         this.shootingSound.play();
-        bullet.moveBullets(bullets);
+        bullet.moveBullets(this.dualBullets);
 
         this.nextFire = this.game.time.time + FIRE_RATE;
+    }
+
+    update() {
+        if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
+            this.fire();
+        }
     }
 }
