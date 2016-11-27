@@ -11,4 +11,4 @@ lint:
 	$(NODE_BIN)/tslint --project ./tsconfig.json
 
 run-server:
-	$(NODE_BIN)/webpack-dev-server -w
+	$(NODE_BIN)/concurrently "$(NODE_BIN)/webpack-dev-server -w" "$(NODE_BIN)/webpack -w"
