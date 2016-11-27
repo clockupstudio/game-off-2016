@@ -20,7 +20,7 @@ export default class PowerUpGroup {
         });
     }
 
-    checkCollisionWith(game: Phaser.Game, her: Her){
+    checkCollisionWith(game: Phaser.Game, her: Her) {
         _.forEach(this.powerUps, (powerUp: PowerUp) => {
             game.physics.arcade.collide(powerUp.sprite, her.sprite, (collidedPowerUp) => {
                 collidedPowerUp.destroy();

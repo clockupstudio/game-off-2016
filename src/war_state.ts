@@ -18,7 +18,6 @@ export class WarState extends Phaser.State {
     private levelMap: Phaser.Tilemap;
     private backgroundLayer: Phaser.TilemapLayer;
     private enemyGroup: SmallFish[];
-
     private stageBackground: StageBackground;
     private powerUpGroup: PowerUpGroup; 
 
@@ -49,11 +48,11 @@ export class WarState extends Phaser.State {
     }
 
     createHer() {
-        let position: { x:number, y: number} = this.findHerOrigin();
+        let position: { x: number, y: number } = this.findHerOrigin();
         this.her = Her.create(this.game, position.x, position.y);
     }
 
-    findHerOrigin(): {x: number, y: number} {
+    findHerOrigin(): { x: number, y: number } {
 
         let playerOrigin = _.find(this.levelMap.objects["Player"], (mapObject: any) => {
             return mapObject.type === "player_start";
@@ -77,24 +76,24 @@ export class WarState extends Phaser.State {
 
     createItems() {
         this.powerUpGroup = new PowerUpGroup();
-        
+
         this.findObjectOrigins("item").forEach((element) => {
             this.powerUpGroup.add(PowerUp.create(this.game, element.x, element.y));
         });
     }
 
-    createObjectFromMap(type: string, group:any[], createFunction:()=>{}) {
+    createObjectFromMap(type: string, group: any[], createFunction: () => {}) {
         this.findObjectOrigins(type).forEach((element) => {
             group.push(createFunction());
         });
     }
 
-    findObjectOrigins(type: string): {x: number, y: number}[] {
+    findObjectOrigins(type: string): { x: number, y: number }[] {
         return _.filter(this.levelMap.objects["Player"], (mapObject: any) => {
             return mapObject.type === type;
         });
     }
-    
+
     update() {
         this.stageBackground.update();
 
@@ -103,7 +102,7 @@ export class WarState extends Phaser.State {
             smallFish.update()
         });
         this.enemyGroup.forEach((smallFish: SmallFish) => {
-            this.game.physics.arcade.collide(smallFish.sprite, this.her.sprite, ()=>{
+            this.game.physics.arcade.collide(smallFish.sprite, this.her.sprite, () => {
                 this.her.destroy();
             });
         });

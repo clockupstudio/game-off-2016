@@ -1,12 +1,12 @@
 export class PowerUp {
     
-    private static VELOCITY:number = 6;
+    private static VELOCITY:number = 6;  
 
     constructor(private powerUpSprite: Phaser.Sprite){}
 
     get sprite(): Phaser.Sprite {
         return this.powerUpSprite;
-    }
+    } 
 
     update() {
         this.powerUpSprite.y += PowerUp.VELOCITY;
