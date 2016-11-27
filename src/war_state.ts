@@ -8,7 +8,7 @@ import PowerUpGroup from "./power_up_group";
 import { TileObject } from "./tile_object";
 import MediumFish from "./medium_fish";
 import { Enemy } from "./enemy"; 
-
+import IE from "./ie";
 
 const SPRITESHEETS_PATH = "assets/spritesheets";
 const SOUNDS_PATH = "assets/sounds";
@@ -85,7 +85,7 @@ export class WarState extends Phaser.State {
                 this.enemyGroup.add(MediumFish.create(this.game, element.x, element.y));
             }
             if (element.properties.sprite === "boss_ie") {
-                this.enemyGroup.add(this.game.add.sprite(element.x, element.y, "boss_ie"));
+                this.enemyGroup.add(new IE(this.game, element.x, element.y));
             }
         });
     }
