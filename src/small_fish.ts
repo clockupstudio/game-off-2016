@@ -2,21 +2,20 @@ import * as Phaser from "phaser";
 
 const VELOCITY = 10;
 
-export class SmallFish {
+export class SmallFish extends Phaser.Sprite {
 
-    constructor(private smallFishSprite: Phaser.Sprite) {
+    constructor(game: Phaser.Game, x: number, y: number) {
+        super(game, x, y, "small_fish");
+        this.anchor.setTo(0.5);
+        game.physics.arcade.enable(this);
     }
 
     move() {
-        this.smallFishSprite.y += VELOCITY;
+        this.y += VELOCITY;
     }
 
     movedOutOfGame(): boolean {
-        return (this.smallFishSprite.y > 3360);
-    }
-
-    destroy() {
-        this.smallFishSprite.destroy();
+        return (this.y > 3360);
     }
 
     update() {
@@ -26,14 +25,8 @@ export class SmallFish {
         }
     }
 
-    get sprite(): Phaser.Sprite {
-        return this.smallFishSprite;
-    }
 
     static create(game: Phaser.Game, x: number, y: number): SmallFish {
-        let sprite = game.add.sprite(x, y, "small_fish");
-        sprite.anchor.setTo(0.5);
-        game.physics.arcade.enable(sprite);
-        return new SmallFish(sprite);
+        return new SmallFish(game, x, y);
     }
 }
