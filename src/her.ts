@@ -80,12 +80,12 @@ export class Gun {
 
     private nextFire: number;
     private shootingSound: Phaser.Sound;
-    private dualBullets: DualBullet[];
+    private dualBullets: Phaser.Group;
 
 
     constructor(private game: Phaser.Game, private herSprite: Phaser.Sprite) {
         this.shootingSound = new Phaser.Sound(this.game, "shooting");
-        this.dualBullets = [];
+        this.dualBullets = game.add.group();
         this.nextFire = 0;
     }
 
@@ -94,14 +94,14 @@ export class Gun {
             return;
         }
 
-        this.dualBullets.push(new DualBullet(this.game, this.herSprite.x, this.herSprite.y));
+        this.dualBullets.add(new DualBullet(this.game, this.herSprite.x, this.herSprite.y));
         this.shootingSound.play();
 
         this.nextFire = this.game.time.time + FIRE_RATE;
     }
 
     collideWith(enemies: Phaser.Group) {
-        _.each(this.dualBullets, (dualBullet: DualBullet) => {
+        _.each(this.dualBullets.children, (dualBullet: DualBullet) => {
             this.game.physics.arcade.collide(dualBullet, enemies, (bullet, enemy) => {
                 if (bullet.visible) {
                     bullet.visible = false;
@@ -117,6 +117,10 @@ export class Gun {
         if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
             this.fire();
         }
+
+        this.dualBullets.filter((dualBullet: DualBullet) => {
+            return dualBullet.isOutOfCamera();
+        }).callAll('destroy');
     }
 }
 

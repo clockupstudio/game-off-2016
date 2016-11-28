@@ -25,11 +25,13 @@ export class DualBullet extends Phaser.Group {
         const bullets = createDualBullets(game, x, y);
         this.add(bullets[0]);
         this.add(bullets[1]);
-
-        game.add.existing(this);
     }
 
     update() {
         this.setAll('body.velocity.y', -BULLET_VELOCITY);
+    }
+
+    isOutOfCamera(): boolean {
+        return this.children[0].y <= this.game.camera.y;
     }
 }
