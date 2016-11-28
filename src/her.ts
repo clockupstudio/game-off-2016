@@ -90,7 +90,7 @@ export class Gun {
     private nextFire: number;
     private shootingSound: Phaser.Sound;
     private dualBullets: Phaser.Group;
-
+    private level: number = 1;
 
     constructor(private game: Phaser.Game, private herSprite: Phaser.Sprite) {
         this.shootingSound = new Phaser.Sound(this.game, "shooting");
@@ -133,7 +133,8 @@ export class Gun {
     }
 
     upgrade() {
-        console.log("POWERUP");
+        this.level++;
+        console.log(this.level);
     }
 }
 

@@ -58,7 +58,7 @@ export class WarState extends Phaser.State {
 
         this.gun = new Gun(this.game, this.her.sprite);
 
-        this.her.addCollectedItemListener(this.gun.upgrade);
+        this.her.addCollectedItemListener(()=> { this.gun.upgrade() });
     }
 
     createHer() {
