@@ -20,7 +20,7 @@ export default class MediumFish extends Phaser.Sprite {
         if((this.her.sprite.y - this.y ) <= 640 ) {
             this.shoot = true;
 
-            let evilBullet: Phaser.Sprite = this.game.add.sprite(this.x, this.y, "evil_bullet");
+            let evilBullet: Phaser.Sprite = this.game.add.sprite(this.x+40, this.y+80, "evil_bullet");
             this.game.physics.arcade.enable(evilBullet);
             this.game.physics.arcade.moveToObject(evilBullet, this.her.sprite, 300);
         }
