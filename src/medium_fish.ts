@@ -1,9 +1,11 @@
 import { Her } from "./her";
+import { EvilBulletShooter } from "./evil_bullet";
 
 export default class MediumFish extends Phaser.Sprite {
 
     private VELOCITY: number = 5;
     private shoot: boolean = false;
+    private evilBulletShooter: EvilBulletShooter = new EvilBulletShooter(this.game);
 
     constructor(game: Phaser.Game, x: number, y: number, private her:Her) {
         super(game, x, y, "medium_fish");
@@ -19,10 +21,7 @@ export default class MediumFish extends Phaser.Sprite {
 
         if((this.her.sprite.y - this.y ) <= 640 ) {
             this.shoot = true;
-
-            let evilBullet: Phaser.Sprite = this.game.add.sprite(this.x+40, this.y+80, "evil_bullet");
-            this.game.physics.arcade.enable(evilBullet);
-            this.game.physics.arcade.moveToObject(evilBullet, this.her.sprite, 300);
+            this.evilBulletShooter.shootTo(this.x+40, this.y+80, this.her.sprite);
         }
     }
 
