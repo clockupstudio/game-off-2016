@@ -44,7 +44,7 @@ export class WarState extends Phaser.State {
 
     create() {
         this.stageBackground = StageBackground.create(this.game);
-        this.game.world.add(this.stageBackground);
+        this.game.add.existing(this.stageBackground);
 
         this.levelMap = this.game.add.tilemap("level_01");
         this.backgroundLayer = this.levelMap.createLayer('Background');
