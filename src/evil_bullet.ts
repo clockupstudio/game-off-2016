@@ -3,6 +3,7 @@ import { Her } from "./her";
 export class EvilBullet extends Phaser.Sprite {
     constructor(game: Phaser.Game, x: number, y: number) {
         super(game, x, y, "evil_bullet")
+        this.scale.setTo(2,2);
     }
 }
 
