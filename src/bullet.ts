@@ -1,4 +1,5 @@
 import * as Phaser from "phaser";
+import * as _ from "lodash";
 
 const BULLET_VELOCITY = 1000;
 
@@ -51,6 +52,13 @@ export class QuadralBullet extends Phaser.Group {
 
     update() {
         this.setAll('body.velocity.y', -BULLET_VELOCITY);
+    }
+
+    isOutOfCamera(): boolean {
+        if( _.isUndefined(this.children[0]) ){
+            return false;
+        }
+        return this.children[0].y <= this.game.camera.y;
     }
 }
 
