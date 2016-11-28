@@ -57,6 +57,8 @@ export class WarState extends Phaser.State {
         this.game.camera.y = 2280;
 
         this.gun = new Gun(this.game, this.her.sprite);
+
+        this.her.addCollectedItemListener(this.gun.upgrade);
     }
 
     createHer() {

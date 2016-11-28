@@ -10,6 +10,7 @@ export class Her {
     private fireRate = 200;
     private nextFire: number;
     private herController: HerController;
+    private onCollectedItem: Phaser.Signal = new Phaser.Signal();
 
     constructor(private herSprite: Phaser.Sprite) {
         this.herController = new HerController(this.herSprite.game, this);
@@ -37,6 +38,14 @@ export class Her {
 
     destroy() {
         this.herSprite.destroy();
+    }
+
+    addCollectedItemListener(listener) {
+        this.onCollectedItem.add(listener);
+    }
+
+    notifyCollectedItemListener() {
+        this.onCollectedItem.dispatch();
     }
 
     get sprite(): Phaser.Sprite {
@@ -121,6 +130,10 @@ export class Gun {
         this.dualBullets.filter((dualBullet: DualBullet) => {
             return dualBullet.isOutOfCamera();
         }).callAll('destroy');
+    }
+
+    upgrade() {
+        console.log("POWERUP");
     }
 }
 
