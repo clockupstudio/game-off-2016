@@ -9,12 +9,14 @@ export class EvilBullet extends Phaser.Sprite {
 
 export class EvilBulletShooter {
 
-    constructor(private game: Phaser.Game) { }
+    constructor(private game: Phaser.Game, private evilBulletGroup:Phaser.Group) { }
 
     shootTo(originX: number, originY: number, target: Phaser.Sprite) {
         let evilBullet: EvilBullet = new EvilBullet(this.game, originX, originY);
         this.game.world.add(evilBullet);
         this.game.physics.arcade.enable(evilBullet);
         this.game.physics.arcade.moveToObject(evilBullet, target, 300);
+
+        this.evilBulletGroup.add(evilBullet);
     }
 }

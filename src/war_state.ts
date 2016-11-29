@@ -10,7 +10,6 @@ import MediumFish from "./medium_fish";
 import { Enemy } from "./enemy";
 import IE from "./ie";
 
-
 const SPRITESHEETS_PATH = "assets/spritesheets";
 const SOUNDS_PATH = "assets/sounds";
 const TILEMAPS_PATH = "assets/tilemaps";
@@ -25,7 +24,7 @@ export class WarState extends Phaser.State {
     private stageBackground: StageBackground;
     private powerUpGroup: PowerUpGroup;
     private gun: Gun
-
+    private evilBulletGroup: Phaser.Group;
 
     preload() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -65,7 +64,6 @@ export class WarState extends Phaser.State {
     }
 
     findHerOrigin(): { x: number, y: number } {
-
         let playerOrigin = _.find(this.levelMap.objects["Player"], (mapObject: any) => {
             return mapObject.type === "player_start";
         });
@@ -74,10 +72,11 @@ export class WarState extends Phaser.State {
             x: playerOrigin.x,
             y: playerOrigin.y - 160
         };
-
     }
 
     createEnemies() {
+        this.evilBulletGroup = this.game.add.physicsGroup();
+
         this.enemyGroup = this.game.add.group();
 
         this.findObjectOrigins("enemy").forEach((element: TileObject) => {
@@ -85,7 +84,7 @@ export class WarState extends Phaser.State {
                 this.enemyGroup.add(SmallFish.create(this.game, element.x, element.y - 40));
             }
             if (element.properties.sprite === "medium_fish") {
-                this.enemyGroup.add(MediumFish.create(this.game, element.x, element.y, this.her));
+                this.enemyGroup.add(MediumFish.create(this.game, element.x, element.y, this.her, this.evilBulletGroup));
             }
             if (element.properties.sprite === "boss_ie") {
                 this.enemyGroup.add(new IE(this.game, element.x, element.y));
@@ -126,6 +125,10 @@ export class WarState extends Phaser.State {
 
         this.gun.collideWith(this.enemyGroup);
         this.gun.update();
+
+        if (this.game.physics.arcade.collide(this.her.sprite, this.evilBulletGroup)) {
+            this.her.destroy();
+        };
     }
 
     render() {
