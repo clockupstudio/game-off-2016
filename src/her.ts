@@ -1,5 +1,10 @@
 import * as Phaser from "phaser";
 import * as _ from "lodash";
+<<<<<<< HEAD
+=======
+import { DualBullet } from "./bullet";
+import * as explosion from "./explosion";
+>>>>>>> IE will explode himself when die
 
 const VELOCITY = 10;
 
