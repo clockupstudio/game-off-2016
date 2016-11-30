@@ -1,5 +1,5 @@
 import { DualBullet, QuadralBullet } from "./bullet";
-import { Explosion } from "./explosion";
+import { smallExplosion } from "./explosion";
 import * as _ from "lodash";
 
 const FIRE_RATE = 200;
@@ -66,7 +66,7 @@ export class Gun {
 function explodeEnemy(game: Phaser.Game, enemy: Phaser.Sprite) {
     const [x, y] = [enemy.x, enemy.y];
     enemy.destroy();
-    const explosion = new Explosion(game, x, y);
+    const explosion = smallExplosion(game, x, y);
     explosion.explode().onComplete.add(() => {
         explosion.destroy();
     });
