@@ -1,6 +1,6 @@
 import * as Phaser from "phaser";
 import { WarState } from "./war_state";
-
+import { TitleState } from "./title_state";
 const GAME_WIDTH = 1920;
 const GAME_HEIGHT = 1080;
 const GAME_ID = "f5-game";
@@ -28,8 +28,9 @@ export class F5 {
 
         this.game.state.add("war", WarState, false);
         this.game.state.add("game over", GameOver, false);
-
-        this.game.state.start("war");
+        this.game.state.add("title", TitleState, false);
+        
+        this.game.state.start("title");
     }
 
 }
