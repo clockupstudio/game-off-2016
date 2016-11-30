@@ -33,6 +33,9 @@ export class DualBullet extends Phaser.Group {
     }
 
     isOutOfCamera(): boolean {
+        if (_.isUndefined(this.children[0])) {
+            return false;
+        }
         return this.children[0].y <= this.game.camera.y;
     }
 }
@@ -55,7 +58,7 @@ export class QuadralBullet extends Phaser.Group {
     }
 
     isOutOfCamera(): boolean {
-        if( _.isUndefined(this.children[0]) ){
+        if (_.isUndefined(this.children[0])) {
             return false;
         }
         return this.children[0].y <= this.game.camera.y;
