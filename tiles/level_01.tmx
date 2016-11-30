@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="100" tilewidth="80" tileheight="80" nextobjectid="47">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="200" tilewidth="80" tileheight="80" nextobjectid="405">
  <tileset firstgid="1" name="main_char" tilewidth="160" tileheight="160" tilecount="1" columns="1">
   <image source="../assets/spritesheets/main_char.png" width="160" height="160"/>
  </tileset>
@@ -16,125 +16,2015 @@
   <image source="../assets/spritesheets/boss_stage_1.png" width="720" height="462"/>
  </tileset>
  <objectgroup name="Player" offsetx="152" offsety="-48">
-  <object id="2" type="player_start" gid="1" x="882" y="8000" width="160" height="160"/>
-  <object id="6" type="enemy" gid="2" x="942" y="6880" width="40" height="40">
+  <object id="2" type="player_start" gid="1" x="882" y="16000" width="160" height="160"/>
+  <object id="6" type="enemy" gid="2" x="944" y="14710" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="7" type="enemy" gid="2" x="942" y="6812" width="40" height="40">
+  <object id="7" type="enemy" gid="2" x="944" y="14642" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="8" type="enemy" gid="2" x="940.667" y="6736" width="40" height="40">
+  <object id="8" type="enemy" gid="2" x="942.667" y="14566" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="9" type="enemy" gid="2" x="940.667" y="6664" width="40" height="40">
+  <object id="9" type="enemy" gid="2" x="942.667" y="14494" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="10" type="enemy" gid="2" x="940.667" y="6588.67" width="40" height="40">
+  <object id="10" type="enemy" gid="2" x="942.667" y="14418.7" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="23" type="item" gid="3" x="982.572" y="2936.37" width="120" height="120">
+  <object id="23" type="item" gid="3" x="814.572" y="13812.4" width="120" height="120">
    <properties>
     <property name="sprite" value="power_up"/>
    </properties>
   </object>
-  <object id="30" type="enemy" gid="4" x="1325.32" y="5130.88" width="80" height="80">
+  <object id="30" type="enemy" gid="4" x="1325.32" y="13130.9" width="80" height="80">
    <properties>
     <property name="sprite" value="medium_fish"/>
    </properties>
   </object>
-  <object id="31" type="enemy" gid="4" x="444.662" y="4009.97" width="80" height="80">
+  <object id="31" type="enemy" gid="4" x="444.662" y="12010" width="80" height="80">
    <properties>
     <property name="sprite" value="medium_fish"/>
    </properties>
   </object>
-  <object id="32" type="enemy" gid="5" x="783.82" y="478.93" width="360" height="460">
+  <object id="32" type="enemy" gid="5" x="731.82" y="11042.9" width="360" height="460">
    <properties>
     <property name="sprite" value="boss_ie"/>
    </properties>
   </object>
-  <object id="33" type="enemy" gid="4" x="1322.3" y="4758.94" width="80" height="80">
+  <object id="33" type="enemy" gid="4" x="1322.3" y="12758.9" width="80" height="80">
    <properties>
     <property name="sprite" value="medium_fish"/>
    </properties>
   </object>
-  <object id="34" type="enemy" gid="4" x="441.636" y="3762.02" width="80" height="80">
+  <object id="34" type="enemy" gid="4" x="441.636" y="11762" width="80" height="80">
    <properties>
     <property name="sprite" value="medium_fish"/>
    </properties>
   </object>
-  <object id="35" type="enemy" gid="4" x="1325.32" y="4489.82" width="80" height="80">
+  <object id="35" type="enemy" gid="4" x="1325.32" y="12489.8" width="80" height="80">
    <properties>
     <property name="sprite" value="medium_fish"/>
    </properties>
   </object>
-  <object id="36" type="enemy" gid="2" x="1500.67" y="6176" width="40" height="40">
+  <object id="36" type="enemy" gid="2" x="1346.67" y="14002" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="37" type="enemy" gid="2" x="1500.67" y="6028.67" width="40" height="40">
+  <object id="37" type="enemy" gid="2" x="1346.67" y="13854.7" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="38" type="enemy" gid="2" x="1500.67" y="6104" width="40" height="40">
+  <object id="38" type="enemy" gid="2" x="1346.67" y="13930" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="39" type="enemy" gid="2" x="1502" y="6320" width="40" height="40">
+  <object id="39" type="enemy" gid="2" x="1348" y="14146" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="40" type="enemy" gid="2" x="1502" y="6252" width="40" height="40">
+  <object id="40" type="enemy" gid="2" x="1348" y="14078" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="41" type="enemy" gid="2" x="382.667" y="5612" width="40" height="40">
+  <object id="41" type="enemy" gid="2" x="538.667" y="13610" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="42" type="enemy" gid="2" x="382.667" y="5464.67" width="40" height="40">
+  <object id="42" type="enemy" gid="2" x="538.667" y="13462.7" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="43" type="enemy" gid="2" x="382.667" y="5540" width="40" height="40">
+  <object id="43" type="enemy" gid="2" x="538.667" y="13538" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="44" type="enemy" gid="2" x="384" y="5756" width="40" height="40">
+  <object id="44" type="enemy" gid="2" x="540" y="13754" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="45" type="enemy" gid="2" x="384" y="5688" width="40" height="40">
+  <object id="45" type="enemy" gid="2" x="540" y="13686" width="40" height="40">
    <properties>
     <property name="sprite" value="small_fish"/>
    </properties>
   </object>
-  <object id="46" type="enemy" gid="4" x="447.636" y="3502.02" width="80" height="80">
+  <object id="46" type="enemy" gid="4" x="447.636" y="11502" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="47" type="enemy" gid="2" x="696.667" y="11060" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="48" type="enemy" gid="2" x="624.667" y="11058.7" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="49" type="enemy" gid="2" x="938.667" y="10826" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="50" type="enemy" gid="2" x="866.667" y="10824.7" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="51" type="enemy" gid="2" x="1180.67" y="11056" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="52" type="enemy" gid="2" x="1108.67" y="11054.7" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="53" type="enemy" gid="2" x="616.667" y="10730" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="54" type="enemy" gid="2" x="544.667" y="10728.7" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="55" type="enemy" gid="2" x="1252.67" y="10734" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="56" type="enemy" gid="2" x="1180.67" y="10732.7" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="57" type="item" gid="3" x="830.572" y="10614.4" width="120" height="120">
+   <properties>
+    <property name="sprite" value="power_up"/>
+   </properties>
+  </object>
+  <object id="58" type="enemy" gid="4" x="361.636" y="9952.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="59" type="enemy" gid="4" x="441.636" y="9952.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="60" type="enemy" gid="4" x="523.636" y="9950.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="61" type="enemy" gid="4" x="1085.64" y="10142" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="62" type="enemy" gid="4" x="1003.64" y="10144" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="63" type="enemy" gid="4" x="923.636" y="10144" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="64" type="enemy" gid="4" x="835.636" y="10498" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="65" type="enemy" gid="4" x="753.636" y="10500" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="66" type="enemy" gid="4" x="673.636" y="10500" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="67" type="enemy" gid="4" x="1081.64" y="9626.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="68" type="enemy" gid="4" x="999.636" y="9628.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="69" type="enemy" gid="4" x="919.636" y="9628.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="70" type="enemy" gid="4" x="1081.64" y="9534.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="71" type="enemy" gid="4" x="999.636" y="9536.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="72" type="enemy" gid="4" x="919.636" y="9536.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="73" type="enemy" gid="2" x="692.667" y="8906" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="74" type="enemy" gid="2" x="620.667" y="8904.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="75" type="enemy" gid="2" x="850.667" y="8908" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="76" type="enemy" gid="2" x="778.667" y="8906.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="77" type="enemy" gid="2" x="776.667" y="8980.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="78" type="enemy" gid="2" x="690.667" y="8980" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="79" type="enemy" gid="2" x="848.667" y="8982" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="80" type="enemy" gid="2" x="618.667" y="8978.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="81" type="enemy" gid="2" x="786.667" y="9058.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="82" type="enemy" gid="2" x="700.667" y="9058" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="83" type="enemy" gid="2" x="858.667" y="9060" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="84" type="enemy" gid="2" x="628.667" y="9056.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="85" type="enemy" gid="2" x="784.667" y="9138.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="86" type="enemy" gid="2" x="698.667" y="9138" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="87" type="enemy" gid="2" x="856.667" y="9140" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="88" type="enemy" gid="2" x="626.667" y="9136.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="89" type="enemy" gid="2" x="926.667" y="9138.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="90" type="enemy" gid="2" x="1078.67" y="8908.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="91" type="enemy" gid="2" x="992.667" y="8908" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="92" type="enemy" gid="2" x="918.667" y="8980.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="93" type="enemy" gid="2" x="1000.67" y="9060" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="94" type="enemy" gid="2" x="928.667" y="9058.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="95" type="enemy" gid="2" x="990.667" y="8982" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="96" type="enemy" gid="2" x="1158.67" y="9062" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="97" type="enemy" gid="2" x="1150.67" y="8910" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="98" type="enemy" gid="2" x="1084.67" y="9140.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="99" type="enemy" gid="2" x="1156.67" y="9142" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="100" type="enemy" gid="2" x="1076.67" y="8982.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="101" type="enemy" gid="2" x="998.667" y="9140" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="102" type="enemy" gid="2" x="1086.67" y="9060.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="103" type="enemy" gid="2" x="1148.67" y="8984" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="104" type="enemy" gid="2" x="920.667" y="8906.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="105" type="enemy" gid="2" x="20.667" y="9132.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="106" type="enemy" gid="2" x="552.667" y="9058" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="107" type="enemy" gid="2" x="470.667" y="8978.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="108" type="enemy" gid="2" x="92.667" y="9134" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="109" type="enemy" gid="2" x="242.667" y="8978" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="110" type="enemy" gid="2" x="392.667" y="9136" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="111" type="enemy" gid="2" x="252.667" y="9056" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="112" type="enemy" gid="2" x="180.667" y="9054.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="113" type="enemy" gid="2" x="472.667" y="8904.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="114" type="enemy" gid="2" x="322.667" y="9054.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="115" type="enemy" gid="2" x="542.667" y="8980" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="116" type="enemy" gid="2" x="12.667" y="8974.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="117" type="enemy" gid="2" x="312.667" y="8976.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="118" type="enemy" gid="2" x="84.667" y="8976" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="119" type="enemy" gid="2" x="14.667" y="8900.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="120" type="enemy" gid="2" x="172.667" y="8902.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="121" type="enemy" gid="2" x="94.667" y="9054" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="122" type="enemy" gid="2" x="394.667" y="9056" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="123" type="enemy" gid="2" x="384.667" y="8978" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="124" type="enemy" gid="2" x="314.667" y="8902.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="125" type="enemy" gid="2" x="478.667" y="9136.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="126" type="enemy" gid="2" x="386.667" y="8904" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="127" type="enemy" gid="2" x="22.667" y="9052.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="128" type="enemy" gid="2" x="170.667" y="8976.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="129" type="enemy" gid="2" x="244.667" y="8904" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="130" type="enemy" gid="2" x="480.667" y="9056.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="131" type="enemy" gid="2" x="250.667" y="9136" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="132" type="enemy" gid="2" x="320.667" y="9134.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="133" type="enemy" gid="2" x="544.667" y="8906" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="134" type="enemy" gid="2" x="178.667" y="9134.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="135" type="enemy" gid="2" x="86.667" y="8902" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="136" type="enemy" gid="2" x="550.667" y="9138" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="137" type="enemy" gid="2" x="1620.67" y="9064" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="138" type="enemy" gid="2" x="1538.67" y="8984.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="139" type="enemy" gid="2" x="1310.67" y="8984" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="140" type="enemy" gid="2" x="1460.67" y="9142" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="141" type="enemy" gid="2" x="1320.67" y="9062" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="142" type="enemy" gid="2" x="1248.67" y="9060.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="143" type="enemy" gid="2" x="1540.67" y="8910.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="144" type="enemy" gid="2" x="1390.67" y="9060.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="145" type="enemy" gid="2" x="1610.67" y="8986" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="146" type="enemy" gid="2" x="1380.67" y="8982.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="147" type="enemy" gid="2" x="1240.67" y="8908.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="148" type="enemy" gid="2" x="1462.67" y="9062" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="149" type="enemy" gid="2" x="1452.67" y="8984" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="150" type="enemy" gid="2" x="1382.67" y="8908.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="151" type="enemy" gid="2" x="1546.67" y="9142.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="152" type="enemy" gid="2" x="1454.67" y="8910" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="153" type="enemy" gid="2" x="1238.67" y="8982.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="154" type="enemy" gid="2" x="1312.67" y="8910" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="155" type="enemy" gid="2" x="1548.67" y="9062.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="156" type="enemy" gid="2" x="1318.67" y="9142" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="157" type="enemy" gid="2" x="1388.67" y="9140.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="158" type="enemy" gid="2" x="1612.67" y="8912" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="159" type="enemy" gid="2" x="1246.67" y="9140.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="160" type="enemy" gid="2" x="1618.67" y="9144" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="161" type="enemy" gid="2" x="1870.67" y="9148" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="162" type="enemy" gid="2" x="1714.67" y="9066" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="163" type="enemy" gid="2" x="1792.67" y="8914.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="164" type="enemy" gid="2" x="1800.67" y="9066.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="165" type="enemy" gid="2" x="1862.67" y="8990" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="166" type="enemy" gid="2" x="1712.67" y="9146" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="167" type="enemy" gid="2" x="1872.67" y="9068" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="168" type="enemy" gid="2" x="1864.67" y="8916" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="169" type="enemy" gid="2" x="1706.67" y="8914" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="170" type="enemy" gid="2" x="1798.67" y="9146.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="171" type="enemy" gid="2" x="1790.67" y="8988.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="172" type="enemy" gid="2" x="1704.67" y="8988" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="173" type="enemy" gid="4" x="759.636" y="9230.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="174" type="enemy" gid="4" x="679.636" y="9230.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="175" type="enemy" gid="4" x="841.636" y="9228.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="176" type="enemy" gid="4" x="759.636" y="9322.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="177" type="enemy" gid="4" x="841.636" y="9320.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="178" type="enemy" gid="4" x="679.636" y="9322.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="179" type="enemy" gid="4" x="445.636" y="8888.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="180" type="enemy" gid="4" x="365.636" y="8888.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="181" type="enemy" gid="4" x="527.636" y="8886.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="182" type="enemy" gid="4" x="445.636" y="8980.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="183" type="enemy" gid="4" x="527.636" y="8978.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="184" type="enemy" gid="4" x="365.636" y="8980.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="185" type="enemy" gid="2" x="792.667" y="7604" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="186" type="enemy" gid="2" x="872.667" y="7372.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="187" type="enemy" gid="2" x="878.667" y="7604.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="188" type="enemy" gid="2" x="794.667" y="7524" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="189" type="enemy" gid="2" x="784.667" y="7446" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="190" type="enemy" gid="2" x="870.667" y="7446.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="191" type="enemy" gid="2" x="880.667" y="7524.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="192" type="enemy" gid="2" x="786.667" y="7372" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="193" type="enemy" gid="2" x="866.667" y="7070.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="194" type="enemy" gid="2" x="874.667" y="7222.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="195" type="enemy" gid="2" x="786.667" y="7302" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="196" type="enemy" gid="2" x="872.667" y="7302.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="197" type="enemy" gid="2" x="864.667" y="7144.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="198" type="enemy" gid="2" x="778.667" y="7144" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="199" type="enemy" gid="2" x="780.667" y="7070" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="200" type="enemy" gid="2" x="788.667" y="7222" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="201" type="enemy" gid="2" x="946.667" y="6256.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="202" type="enemy" gid="2" x="954.667" y="6408.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="203" type="enemy" gid="2" x="860.667" y="6186" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="204" type="enemy" gid="2" x="866.667" y="6488" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="205" type="enemy" gid="2" x="952.667" y="6488.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="206" type="enemy" gid="2" x="944.667" y="6330.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="207" type="enemy" gid="2" x="852.667" y="6028" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="208" type="enemy" gid="2" x="854.667" y="5954" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="209" type="enemy" gid="2" x="948.667" y="6106.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="210" type="enemy" gid="2" x="858.667" y="6330" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="211" type="enemy" gid="2" x="946.667" y="6186.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="212" type="enemy" gid="2" x="862.667" y="6106" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="213" type="enemy" gid="2" x="860.667" y="6256" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="214" type="enemy" gid="2" x="940.667" y="5954.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="215" type="enemy" gid="2" x="868.667" y="6408" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="216" type="enemy" gid="2" x="938.667" y="6028.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="217" type="enemy" gid="2" x="538.667" y="5690.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="218" type="enemy" gid="2" x="546.667" y="5842.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="219" type="enemy" gid="2" x="452.667" y="5620" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="220" type="enemy" gid="2" x="458.667" y="5922" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="221" type="enemy" gid="2" x="544.667" y="5922.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="222" type="enemy" gid="2" x="536.667" y="5764.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="223" type="enemy" gid="2" x="444.667" y="5462" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="224" type="enemy" gid="2" x="446.667" y="5388" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="225" type="enemy" gid="2" x="540.667" y="5540.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="226" type="enemy" gid="2" x="450.667" y="5764" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="227" type="enemy" gid="2" x="538.667" y="5620.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="228" type="enemy" gid="2" x="454.667" y="5540" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="229" type="enemy" gid="2" x="452.667" y="5690" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="230" type="enemy" gid="2" x="532.667" y="5388.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="231" type="enemy" gid="2" x="460.667" y="5842" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="232" type="enemy" gid="2" x="530.667" y="5462.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="233" type="enemy" gid="2" x="1260.67" y="4738.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="234" type="enemy" gid="2" x="1268.67" y="4890.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="235" type="enemy" gid="2" x="1174.67" y="4668" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="236" type="enemy" gid="2" x="1180.67" y="4970" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="237" type="enemy" gid="2" x="1266.67" y="4970.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="238" type="enemy" gid="2" x="1258.67" y="4812.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="239" type="enemy" gid="2" x="1166.67" y="4510" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="240" type="enemy" gid="2" x="1168.67" y="4436" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="241" type="enemy" gid="2" x="1262.67" y="4588.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="242" type="enemy" gid="2" x="1172.67" y="4812" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="243" type="enemy" gid="2" x="1260.67" y="4668.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="244" type="enemy" gid="2" x="1176.67" y="4588" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="245" type="enemy" gid="2" x="1174.67" y="4738" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="246" type="enemy" gid="2" x="1254.67" y="4436.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="247" type="enemy" gid="2" x="1182.67" y="4890" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="248" type="enemy" gid="2" x="1252.67" y="4510.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="249" type="enemy" gid="4" x="687.636" y="5152.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="250" type="enemy" gid="4" x="607.636" y="5152.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="251" type="enemy" gid="4" x="769.636" y="5150.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="252" type="enemy" gid="4" x="921.636" y="5152.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="253" type="enemy" gid="4" x="841.636" y="5152.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="254" type="enemy" gid="4" x="1003.64" y="5150.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="255" type="enemy" gid="4" x="835.636" y="4426.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="256" type="enemy" gid="4" x="997.636" y="4424.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="257" type="enemy" gid="4" x="915.636" y="4426.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="258" type="enemy" gid="4" x="763.636" y="4424.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="259" type="enemy" gid="4" x="601.636" y="4426.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="260" type="enemy" gid="4" x="681.636" y="4426.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="261" type="enemy" gid="4" x="675.636" y="3704.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="262" type="enemy" gid="4" x="837.636" y="3702.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="263" type="enemy" gid="4" x="755.636" y="3704.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="264" type="enemy" gid="4" x="603.636" y="3702.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="265" type="enemy" gid="4" x="441.636" y="3704.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="266" type="enemy" gid="4" x="521.636" y="3704.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="267" type="enemy" gid="4" x="1397.64" y="3302.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="268" type="enemy" gid="4" x="1317.64" y="3302.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="269" type="enemy" gid="4" x="1163.64" y="3302.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="270" type="enemy" gid="4" x="1479.64" y="3300.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="271" type="enemy" gid="4" x="1083.64" y="3302.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="272" type="enemy" gid="4" x="1245.64" y="3300.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="273" type="enemy" gid="2" x="546.667" y="3530.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="274" type="enemy" gid="2" x="462.667" y="3456" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="275" type="enemy" gid="2" x="460.667" y="3530" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="276" type="enemy" gid="2" x="548.667" y="3456.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="277" type="enemy" gid="2" x="698.667" y="3374.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="278" type="enemy" gid="2" x="614.667" y="3300" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="279" type="enemy" gid="2" x="612.667" y="3374" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="280" type="enemy" gid="2" x="700.667" y="3300.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="281" type="enemy" gid="2" x="860.667" y="3216.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="282" type="enemy" gid="2" x="776.667" y="3142" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="283" type="enemy" gid="2" x="774.667" y="3216" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="284" type="enemy" gid="2" x="862.667" y="3142.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="285" type="enemy" gid="2" x="1024.67" y="3130.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="286" type="enemy" gid="2" x="940.667" y="3056" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="287" type="enemy" gid="2" x="938.667" y="3130" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="288" type="enemy" gid="2" x="1026.67" y="3056.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="289" type="enemy" gid="2" x="1184.67" y="3050.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="290" type="enemy" gid="2" x="1100.67" y="2976" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="291" type="enemy" gid="2" x="1098.67" y="3050" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="292" type="enemy" gid="2" x="1186.67" y="2976.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="293" type="enemy" gid="2" x="1348.67" y="2898.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="294" type="enemy" gid="2" x="1264.67" y="2824" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="295" type="enemy" gid="2" x="1262.67" y="2898" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="296" type="enemy" gid="2" x="1350.67" y="2824.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="297" type="enemy" gid="2" x="940.667" y="2250.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="298" type="enemy" gid="2" x="942.667" y="2176.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="299" type="enemy" gid="2" x="938.667" y="2090.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="300" type="enemy" gid="2" x="940.667" y="2016.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="301" type="enemy" gid="2" x="944.667" y="1934.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="302" type="enemy" gid="2" x="946.667" y="1860.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="303" type="enemy" gid="2" x="698.667" y="1548.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="304" type="enemy" gid="2" x="696.667" y="1622.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="305" type="enemy" gid="2" x="702.667" y="1466.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="306" type="enemy" gid="2" x="698.667" y="1782.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="307" type="enemy" gid="2" x="700.667" y="1708.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="308" type="enemy" gid="2" x="704.667" y="1392.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="309" type="enemy" gid="2" x="1342.67" y="1530.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="310" type="enemy" gid="2" x="1340.67" y="1604.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="311" type="enemy" gid="2" x="1346.67" y="1448.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="312" type="enemy" gid="2" x="1342.67" y="1764.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="313" type="enemy" gid="2" x="1344.67" y="1690.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="314" type="enemy" gid="2" x="1348.67" y="1374.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="315" type="enemy" gid="2" x="1164.67" y="910" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="316" type="enemy" gid="2" x="1248.67" y="984.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="317" type="enemy" gid="2" x="1322.67" y="912" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="318" type="enemy" gid="2" x="1256.67" y="1142.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="319" type="enemy" gid="2" x="1004.67" y="1138.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="320" type="enemy" gid="2" x="1172.67" y="1062" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="321" type="enemy" gid="2" x="1162.67" y="984" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="322" type="enemy" gid="2" x="918.667" y="1138" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="323" type="enemy" gid="2" x="846.667" y="1136.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="324" type="enemy" gid="2" x="698.667" y="904.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="325" type="enemy" gid="2" x="1320.67" y="986" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="326" type="enemy" gid="2" x="1068.67" y="982" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="327" type="enemy" gid="2" x="696.667" y="978.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="328" type="enemy" gid="2" x="1170.67" y="1142" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="329" type="enemy" gid="2" x="912.667" y="906" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="330" type="enemy" gid="2" x="776.667" y="1138" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="331" type="enemy" gid="2" x="1258.67" y="1062.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="332" type="enemy" gid="2" x="840.667" y="904.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="333" type="enemy" gid="2" x="1076.67" y="1140" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="334" type="enemy" gid="2" x="910.667" y="980" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="335" type="enemy" gid="2" x="1006.67" y="1058.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="336" type="enemy" gid="2" x="996.667" y="980.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="337" type="enemy" gid="2" x="998.667" y="906.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="338" type="enemy" gid="2" x="706.667" y="1056.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="339" type="enemy" gid="2" x="848.667" y="1056.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="340" type="enemy" gid="2" x="1070.67" y="908" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="341" type="enemy" gid="2" x="770.667" y="906" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="342" type="enemy" gid="2" x="1328.67" y="1144" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="343" type="enemy" gid="2" x="838.667" y="978.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="344" type="enemy" gid="2" x="1078.67" y="1060" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="345" type="enemy" gid="2" x="778.667" y="1058" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="346" type="enemy" gid="2" x="1250.67" y="910.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="347" type="enemy" gid="2" x="704.667" y="1136.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="348" type="enemy" gid="2" x="768.667" y="980" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="349" type="enemy" gid="2" x="920.667" y="1058" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="350" type="enemy" gid="2" x="1330.67" y="1064" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="351" type="enemy" gid="2" x="1164.67" y="156" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="352" type="enemy" gid="2" x="1248.67" y="230.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="353" type="enemy" gid="2" x="1322.67" y="158" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="354" type="enemy" gid="2" x="1256.67" y="388.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="355" type="enemy" gid="2" x="1004.67" y="384.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="356" type="enemy" gid="2" x="1172.67" y="308" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="357" type="enemy" gid="2" x="1162.67" y="230" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="358" type="enemy" gid="2" x="918.667" y="384" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="359" type="enemy" gid="2" x="846.667" y="382.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="360" type="enemy" gid="2" x="698.667" y="150.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="361" type="enemy" gid="2" x="1320.67" y="232" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="362" type="enemy" gid="2" x="1068.67" y="228" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="363" type="enemy" gid="2" x="696.667" y="224.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="364" type="enemy" gid="2" x="1170.67" y="388" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="365" type="enemy" gid="2" x="912.667" y="152" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="366" type="enemy" gid="2" x="776.667" y="384" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="367" type="enemy" gid="2" x="1258.67" y="308.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="368" type="enemy" gid="2" x="840.667" y="150.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="369" type="enemy" gid="2" x="1076.67" y="386" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="370" type="enemy" gid="2" x="910.667" y="226" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="371" type="enemy" gid="2" x="1006.67" y="304.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="372" type="enemy" gid="2" x="996.667" y="226.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="373" type="enemy" gid="2" x="998.667" y="152.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="374" type="enemy" gid="2" x="706.667" y="302.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="375" type="enemy" gid="2" x="848.667" y="302.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="376" type="enemy" gid="2" x="1070.67" y="154" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="377" type="enemy" gid="2" x="770.667" y="152" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="378" type="enemy" gid="2" x="1328.67" y="390" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="379" type="enemy" gid="2" x="838.667" y="224.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="380" type="enemy" gid="2" x="1078.67" y="306" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="381" type="enemy" gid="2" x="778.667" y="304" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="382" type="enemy" gid="2" x="1250.67" y="156.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="383" type="enemy" gid="2" x="704.667" y="382.67" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="384" type="enemy" gid="2" x="768.667" y="226" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="385" type="enemy" gid="2" x="920.667" y="304" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="386" type="enemy" gid="2" x="1330.67" y="310" width="40" height="40">
+   <properties>
+    <property name="sprite" value="small_fish"/>
+   </properties>
+  </object>
+  <object id="387" type="enemy" gid="4" x="365.636" y="2356.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="388" type="enemy" gid="4" x="443.636" y="2432.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="389" type="enemy" gid="4" x="437.636" y="2570.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="390" type="enemy" gid="4" x="359.636" y="2514.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="391" type="enemy" gid="4" x="443.636" y="2272.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="392" type="enemy" gid="4" x="363.636" y="2678.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="393" type="enemy" gid="4" x="359.636" y="1630.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="394" type="enemy" gid="4" x="439.636" y="1224.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="395" type="enemy" gid="4" x="355.636" y="1466.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="396" type="enemy" gid="4" x="433.636" y="1522.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="397" type="enemy" gid="4" x="361.636" y="1308.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="398" type="enemy" gid="4" x="439.636" y="1384.02" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="399" type="enemy" gid="4" x="359.636" y="590.016" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="400" type="enemy" gid="4" x="1401.64" y="434.016" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="401" type="enemy" gid="4" x="441.636" y="430.016" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="402" type="enemy" gid="4" x="523.636" y="600.016" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="403" type="enemy" gid="4" x="1483.64" y="598.016" width="80" height="80">
+   <properties>
+    <property name="sprite" value="medium_fish"/>
+   </properties>
+  </object>
+  <object id="404" type="enemy" gid="4" x="1323.64" y="598.016" width="80" height="80">
    <properties>
     <property name="sprite" value="medium_fish"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Background" width="24" height="100">
+ <layer name="Background" width="24" height="200">
   <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
