@@ -44,18 +44,18 @@ export class WarState extends Phaser.State {
     }
 
     create() {
-        this.stageBackground = StageBackground.create(this.game);
-        this.game.add.existing(this.stageBackground);
-
         this.levelMap = this.game.add.tilemap("level_01");
         this.backgroundLayer = this.levelMap.createLayer('Background');
         this.backgroundLayer.resizeWorld();
+
+        this.stageBackground = StageBackground.create(this.game);
+        this.game.add.existing(this.stageBackground);
 
         this.createHer();
         this.createEnemies();
         this.createItems();
 
-        this.game.camera.y = 2280;
+        this.game.camera.y = this.game.world.height - this.game.camera.height;
 
         this.gun = new Gun(this.game, this.her.sprite);
 
@@ -131,10 +131,6 @@ export class WarState extends Phaser.State {
         if (this.game.physics.arcade.collide(this.her.sprite, this.evilBulletGroup)) {
             this.gameOver();
         };
-    }
-
-    render() {
-        this.game.debug.cameraInfo(this.game.camera, 32, 32);
     }
 
     private gameOver() {

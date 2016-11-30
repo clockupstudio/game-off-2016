@@ -1,6 +1,6 @@
 import * as Phaser from "phaser";
 
-const VELOCITY = 10;
+const VELOCITY = 6;
 
 export class SmallFish extends Phaser.Sprite {
 
