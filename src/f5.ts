@@ -27,7 +27,25 @@ export class F5 {
         this.game.scale.pageAlignVertically = true;
 
         this.game.state.add("war", WarState, false);
+        this.game.state.add("game over", GameOver, false);
+
         this.game.state.start("war");
+    }
+
+}
+
+export class GameOver extends Phaser.State {
+
+    preload() {
+        this.game.load.image("game_over", "assets/images/game_over.png");
+    }
+
+    create() {
+        this.game.add.image(0, 0, "game_over");
+        this.game.input.keyboard.onPressCallback = () => {
+            this.game.input.keyboard.onPressCallback = null;
+            this.game.state.start("war");
+        };
     }
 
 }
