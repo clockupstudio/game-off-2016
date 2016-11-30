@@ -2,7 +2,7 @@ import { DualBullet, QuadralBullet } from "./bullet";
 import { smallExplosion } from "./explosion";
 import * as _ from "lodash";
 
-const FIRE_RATE = 200;
+const FIRE_RATE = 80;
 
 export class Gun {
 
