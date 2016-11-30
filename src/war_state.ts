@@ -119,9 +119,7 @@ export class WarState extends Phaser.State {
         });
 
         _.each(this.enemyGroup.children, (enemy: Enemy) => {
-            this.game.physics.arcade.collide(enemy, this.her.sprite, () => {
-                this.her.destroy();
-            });
+            this.game.physics.arcade.collide(enemy, this.her.sprite, () => this.gameOver());
         });
 
         this.powerUpGroup.checkCollisionWith(this.game, this.her);
@@ -131,11 +129,16 @@ export class WarState extends Phaser.State {
         this.gun.update();
 
         if (this.game.physics.arcade.collide(this.her.sprite, this.evilBulletGroup)) {
-            this.her.destroy();
+            this.gameOver();
         };
     }
 
     render() {
         this.game.debug.cameraInfo(this.game.camera, 32, 32);
+    }
+
+    private gameOver() {
+        this.her.destroy();
+        this.game.state.start("game over");
     }
 }
