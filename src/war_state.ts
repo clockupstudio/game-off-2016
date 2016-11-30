@@ -1,5 +1,6 @@
 import * as Phaser from "phaser";
-import { Her, Gun } from "./her";
+import { Her } from "./her";
+import { Gun } from "./gun";
 import { SmallFish } from "./small_fish";
 import * as _ from "lodash";
 import StageBackground from "./stage_background";
@@ -56,6 +57,8 @@ export class WarState extends Phaser.State {
         this.game.camera.y = 2280;
 
         this.gun = new Gun(this.game, this.her.sprite);
+
+        this.her.addCollectedItemListener(() => { this.gun.upgrade() });
     }
 
     createHer() {

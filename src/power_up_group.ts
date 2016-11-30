@@ -24,6 +24,7 @@ export default class PowerUpGroup {
         _.forEach(this.powerUps, (powerUp: PowerUp) => {
             game.physics.arcade.collide(powerUp.sprite, her.sprite, (collidedPowerUp) => {
                 collidedPowerUp.destroy();
+                her.notifyCollectedItemListener();
             });
         });
     }
