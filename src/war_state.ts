@@ -34,6 +34,7 @@ export class WarState extends Phaser.State {
         this.game.load.image("bullet", `${SPRITESHEETS_PATH}/bullet.png`);
         this.game.load.image("power_up", `${SPRITESHEETS_PATH}/item.png`);
         this.game.load.audio("shooting", `${SOUNDS_PATH}/shooting.ogg`);
+        this.game.load.audio("bomb", `${SOUNDS_PATH}/bomb.ogg`);
         this.game.load.tilemap("level_01", `${TILEMAPS_PATH}/level_01.json`, null, Phaser.Tilemap.TILED_JSON);
         this.game.load.image("stage_background", `${SPRITESHEETS_PATH}/stage.png`);
         this.game.load.image("medium_fish", `${SPRITESHEETS_PATH}/medium_fish.png`);

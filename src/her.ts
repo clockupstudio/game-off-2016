@@ -1,5 +1,7 @@
 import * as Phaser from "phaser";
 import * as _ from "lodash";
+import { DualBullet } from "./bullet";
+import * as explosion from "./explosion";
 
 const VELOCITY = 10;
 
