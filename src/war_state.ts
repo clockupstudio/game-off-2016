@@ -133,6 +133,11 @@ export class WarState extends Phaser.State {
         };
     }
 
+    render() {
+        this.game.debug.body(this.her.sprite);
+    }
+    
+
     private gameOver() {
         this.her.destroy();
         this.game.state.start("game over");
