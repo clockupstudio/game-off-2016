@@ -3,7 +3,7 @@ import * as _ from "lodash";
 import { DualBullet } from "./bullet";
 import * as explosion from "./explosion";
 
-const VELOCITY = 10;
+const VELOCITY = 1000;
 
 export class Her {
 
@@ -16,20 +16,25 @@ export class Her {
         this.herController = new HerController(this.herSprite.game, this);
     }
 
+    idle() {
+        this.herSprite.body.velocity.x = 0;
+        this.herSprite.body.velocity.y = 0;
+    }
+
     moveRight() {
-        this.herSprite.x += VELOCITY;
+        this.herSprite.body.velocity.x = VELOCITY;
     }
 
     moveLeft() {
-        this.herSprite.x -= VELOCITY;
+        this.herSprite.body.velocity.x = -VELOCITY;
     }
 
     moveUp() {
-        this.herSprite.y -= VELOCITY;
+        this.herSprite.body.velocity.y = -VELOCITY;
     }
 
     moveDown() {
-        this.herSprite.y += VELOCITY;
+        this.herSprite.body.velocity.y = VELOCITY;
     }
 
     update() {
@@ -57,7 +62,7 @@ export class Her {
         sprite.inputEnabled = true;
         
         game.physics.arcade.enable(sprite);
-        sprite.body.setSize(40, 40, 40, 40);
+        sprite.body.setSize(80, 128, 40, 16);
         return new Her(sprite);
     }
 
@@ -81,6 +86,8 @@ export class HerController {
             this.her.moveUp();
         } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
             this.her.moveDown();
+        } else {
+            this.her.idle();
         }
     }
 }
